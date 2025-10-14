@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 3D Text */
+.three-d-text {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  display: inline-block;
+}
+
+.three-d-inner {
+  display: inline-block;
+  transform: rotateX(15deg) rotateY(-15deg);
+  text-shadow:
+    1px 1px 0 #999,
+    2px 2px 0 #888,
+    3px 3px 0 #777,
+    4px 4px 0 #666,
+    5px 5px 0 #555,
+    6px 6px 0 #444;
+  transition: transform 0.5s ease;
+  animation: popUp3D 0.6s ease forwards;
+}
+
+/* Optional interactive hover */
+.three-d-text:hover .three-d-inner {
+  transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+}
+
+/* Neon glow effect */
+.text-glow-cyberpunk {
+  color: #fff;
+  text-shadow:
+    0 0 5px #f0f,
+    0 0 10px #f0f,
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
+  animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+    text-shadow: 0 0 5px #f0f, 0 0 10px #0ff;
+  }
+
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 20px #0ff, 0 0 60px #0ff;
+  }
+}
+
+/* Button Glowing Effects */
+.bg-btn-glowing {
+  background: radial-gradient(ellipse at center, rgba(252, , 113, 0.4) 0%, transparent 70%);
+}
+
+.bg-btn-glowing-inset {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.bg-btn-glowing-inset-hover {
+  background: linear-gradient(180deg, rgba(252, , 113, 0.3) 0%, rgba(193, 424, 86, 0.2) 10%);
+}
+
+.text-15 {
+  font-size: 15px;
+}
