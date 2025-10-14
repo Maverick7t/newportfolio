@@ -67,7 +67,7 @@ const AboutSection: React.FC = () => {
             className="space-y-10"
           >
             {/* Bachelor */}
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 dark:border-gray-700/30 transform hover:scale-105 transition-all duration-300">
+            <div className="bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40 transform hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
                   <GraduationCap className="w-6 h-6 text-white" />
@@ -95,7 +95,7 @@ const AboutSection: React.FC = () => {
             </div>
 
             {/* Diploma */}
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 dark:border-gray-700/30 transform hover:scale-105 transition-all duration-300">
+            <div className="bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40 transform hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center">
                   <GraduationCap className="w-6 h-6 text-white" />
@@ -123,7 +123,7 @@ const AboutSection: React.FC = () => {
             </div>
 
             {/* PUC */}
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 dark:border-gray-700/30 transform hover:scale-105 transition-all duration-300">
+            <div className="bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40 transform hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
                   <GraduationCap className="w-6 h-6 text-white" />
@@ -159,7 +159,7 @@ const AboutSection: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="h-full"
           >
-            <div className="h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-10 shadow-xl border border-white/20 dark:border-gray-700/30 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(13,148,136,0.4)] transition-all duration-300 flex flex-col justify-start">
+            <div className="h-full bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-10 shadow-xl border border-white/30 dark:border-gray-700/40 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(13,148,136,0.4)] transition-all duration-300 flex flex-col justify-start">
               <div className="flex items-center mb-6">
                 <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-teal-600 rounded-xl flex items-center justify-center">
                   <User className="w-7 h-7 text-white" />
@@ -218,7 +218,7 @@ const AboutSection: React.FC = () => {
             scale: 1.05,
             boxShadow: "0 0 25px rgba(13,148,136,0.4)"
           }}
-          className="mt-16 w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl border border-white/20 dark:border-gray-700/30 rounded-3xl p-10 shadow-xl transform will-change-transform hover:scale-105"
+          className="mt-16 w-full bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl border border-white/30 dark:border-gray-700/40 rounded-3xl p-10 shadow-xl transform will-change-transform hover:scale-105"
         >
           <div className="flex items-center mb-6">
             <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-teal-600 rounded-xl flex items-center justify-center">

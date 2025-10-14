@@ -31,11 +31,12 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', href: '#home', icon: Home },
-    { name: 'About', href: '#about', icon: User },
+
     { name: 'Experience', href: '#experience', icon: Briefcase },
     { name: 'Projects', href: '#projects', icon: FolderOpen },
     { name: 'Achievements', href: '#achievements', icon: Award },
     { name: 'Dev Arena', href: '#devpost', icon: Rocket },
+    { name: 'About', href: '#about', icon: User },
     { name: 'Contact', href: '#contact', icon: Mail },
   ];
 

@@ -63,7 +63,7 @@ const ProjectsSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.1, ease: "easeOut" }} // smoother & snappier
               whileHover={{ scale: 1.03, rotateX: 1 }} // subtle tilt effect
-              className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 dark:border-gray-700/30 transform-gpu"
+              className="relative bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40 transform-gpu"
               style={{ transformStyle: 'preserve-3d' }}
             >
               {/* Project Icon */}

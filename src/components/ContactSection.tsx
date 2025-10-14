@@ -169,7 +169,7 @@ const ContactSection: React.FC = () => {
                       href={item.href}
                       target={item.href.startsWith('http') ? '_blank' : undefined}
                       rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="flex items-center space-x-4 p-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl border border-white/20 dark:border-gray-700/30 shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="flex items-center space-x-4 p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-2xl border border-white/30 dark:border-gray-700/40 shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                       <div className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                         <item.icon className="w-6 h-6 text-white" />
@@ -188,7 +188,7 @@ const ContactSection: React.FC = () => {
                       <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-200" />
                     </a>
                   ) : (
-                    <div className="flex items-center space-x-4 p-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl border border-white/20 dark:border-gray-700/30 shadow-lg">
+                    <div className="flex items-center space-x-4 p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-2xl border border-white/30 dark:border-gray-700/40 shadow-lg">
                       <div className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center`}>
                         <item.icon className="w-6 h-6 text-white" />
                       </div>
@@ -217,12 +217,12 @@ const ContactSection: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="grid grid-cols-2 gap-4 pt-8"
             >
-              <div className="text-center p-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-xl border border-white/20 dark:border-gray-700/30">
+              <div className="text-center p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-xl border border-white/30 dark:border-gray-700/40">
                 <Clock className="w-8 h-8 text-blue-600 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">24h</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Response Time</div>
               </div>
-              <div className="text-center p-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-xl border border-white/20 dark:border-gray-700/30">
+              <div className="text-center p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-xl border border-white/30 dark:border-gray-700/40">
                 <Globe className="w-8 h-8 text-green-600 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">Remote</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Work Ready</div>
@@ -237,7 +237,7 @@ const ContactSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.1, ease: "easeInOut" }}
             whileHover={{ scale: 1.04 }}
-            className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/20 dark:border-gray-700/30 transition-transform duration-300 ease-in-out transform-gpu"
+            className="relative bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/30 dark:border-gray-700/40 transition-transform duration-300 ease-in-out transform-gpu"
             style={{ transformStyle: 'preserve-3d', willChange: 'transform' }}
           >
             {/* Header */}
