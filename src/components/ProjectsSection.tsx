@@ -6,32 +6,31 @@ const ProjectsSection: React.FC = () => {
   const projects = [
     {
       id: 1,
-      name: "Agentic AI",
-      description: "A full-stack AI chat app with a modern React frontend and FastAPI backend, featuring live web crawling and LLM integration.",
+      name: "AWS AI Agent Global Hackathon 2025",
+      description: "Raven AI, an agentic AI assistant that helps users make informed career decisions by aligning job insights with their goals.",
       highlights: [
-        "Seamlessly integrated real-time web crawling and LLM-powered chat for up-to-date, context-aware responses",
-        "Deployed a scalable, cloud-based backend and a static frontend for reliable, global access.",
+        "Built Using AWS Lambda, DynamoDB, Bedrock, and the Gmail API connected through a serverless pipeline that automates email parsing and AI analysis.",
+        "Fully serverless and automated architecture that’s secure, fast, and actually usable for real job alerts.",
       ],
-      technologies: [" Python", "React", "Fast API", "LangChain", "LangGraph ", "Firecrawl", "Render"],
+      technologies: [" Python", "React", "Fast API", "Lambda", "DynamoDB", "Bedrock"],
       icon: Bot,
       gradient: "from-emerald-500 to-teal-600",
       bgGradient: "from-emerald-500/10 to-teal-600/10",
-      link: "https://github.com/Maverick7t/agent"
+      link: "https://devpost.com/software/raven-ai-sjm47o?ref_content=user-portfolio&ref_feature=in_progress"
     },
     {
       id: 2,
-      name: "QA bot",
-      description: "Azure AI Foundry powered RAG based QnA system.",
+      name: "Google AI Accelerate Hackathon 2025",
+      description: "DevInsight, AI powered RAG based system that turn raw data into Insight.",
       highlights: [
-        "Integrated LangChain with Azure OpenAI for  document retrieval and QA.",
-        "Developed a scalable chatbot that answers queries using RAG techniques.",
-        "Deployed a modular backend with seamless React frontend integration.",
+        "I used a Retrieval-Augmented Generation (RAG) pipeline powered by LangChain, Elasticsearch, and Vertex AI to analyze GitHub data.",
+        "Implemented semantic search and AI summarization for real-time Q&A",
       ],
-      technologies: ["Python", "LangChain", "Flask", "Azure Cognitive Services", "React.js with Vite", "FAISS"],
+      technologies: ["Python", "LangChain", "Flask", "BigQuery", "Elasticsearch", "React"],
       icon: Sparkles,
       gradient: "from-purple-500 to-pink-600",
       bgGradient: "from-purple-500/10 to-pink-600/10",
-      link: "https://github.com/Maverick7t/QA_Tool"
+      link: "https://devpost.com/software/devinsight-j2qnd9"
     }
   ];
 
@@ -58,6 +57,7 @@ const ProjectsSection: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div
+              key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -174,17 +174,58 @@ const ProjectsSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <a href="https://github.com/Maverick7t " target="_blank" rel="noopener noreferrer">
-            <motion.button
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="group inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-amber-500 to-pink-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <LucideGithub className="w-5 h-5 group-hover:rotate-12 transition-transform duration-200" />
-              <span>More on GitHub</span>
-              <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
-            </motion.button>
-          </a>
+          <motion.a
+            href="https://github.com/Maverick7t"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            className="relative inline-flex items-center justify-center gap-2 rounded-full px-8 text-white font-semibold cursor-pointer transition-all duration-300 group"
+            style={{
+              fontSize: '15px',
+              fontWeight: 600,
+              lineHeight: 1,
+              letterSpacing: '-.02em',
+              height: '36px',
+              WebkitFontSmoothing: 'antialiased',
+              background: '#000000',
+            }}
+          >
+            {/* Border gradient overlay */}
+            <span
+              className="absolute rounded-full transition-opacity duration-300 pointer-events-none"
+              style={{
+                inset: '-1px -1px -1.5px -1px',
+                backgroundImage: 'linear-gradient(180deg, #fcc171, #c17c56 55%, #362821)',
+              }}
+            />
+
+            {/* Main black background */}
+            <span
+              className="absolute inset-0 rounded-full pointer-events-none"
+              style={{
+                background: '#000000',
+              }}
+            />
+
+            {/* Top radial glow effect - inside the button */}
+            <span
+              className="absolute left-1/2 -translate-x-1/2 rounded-full transition-transform duration-300 pointer-events-none"
+              style={{
+                top: '-6px',
+                bottom: '20%',
+                width: '90%',
+                backgroundImage: 'radial-gradient(ellipse 40% 40% at 50% 10%, rgba(255, 223, 150, 0.7) 10%, rgba(255, 195, 90, 0.4) 50%, rgba(255, 160, 60, 0.15) 80%, transparent 100%)',
+                mixBlendMode: 'screen',
+                filter: 'blur(1px)',
+              }}
+            />
+
+            {/* Content */}
+            <LucideGithub className="w-5 h-5 relative z-10 group-hover:rotate-12 transition-transform duration-200" />
+            <span className="relative z-10">More on GitHub</span>
+            <ExternalLink className="w-4 h-4 relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+          </motion.a>
         </motion.div>
 
       </div>

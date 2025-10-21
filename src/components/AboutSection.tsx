@@ -6,32 +6,41 @@ import { GraduationCap, MapPin, Calendar, User, Code2 } from 'lucide-react';
 
 import {
   SiPython,
+  SiFlask,
+  SiFastapi,
+  SiDjango,
   SiMysql,
-  SiApacheairflow,
   SiPostgresql,
   SiReact,
-  SiNextdotjs,
   SiDocker,
   SiKubernetes,
   SiGit,
-  SiTerraform,
-  SiNodedotjs,
   SiGnubash,
+  SiTailwindcss,
+  SiAmazonaws,
+  SiMicrosoftazure,
+  SiGooglecloud,
+  SiRust
+
 } from 'react-icons/si';
 
 const techIcons = [
   { icon: SiPython, name: 'Python' },
+  { icon: SiFlask, name: 'Flask' },
+  { icon: SiFastapi, name: 'FastAPI' },
+  { icon: SiDjango, name: 'Django' },
   { icon: SiMysql, name: 'MySQL' },
-  { icon: SiApacheairflow, name: 'Apache Airflow' },
   { icon: SiPostgresql, name: 'PostgreSQL' },
   { icon: SiReact, name: 'React' },
-  { icon: SiNextdotjs, name: 'Next.js' },
+  { icon: SiTailwindcss, name: 'Tailwind CSS' },
   { icon: SiDocker, name: 'Docker' },
   { icon: SiKubernetes, name: 'Kubernetes' },
   { icon: SiGit, name: 'Git' },
-  { icon: SiTerraform, name: 'Terraform' },
-  { icon: SiNodedotjs, name: 'Node.js' },
   { icon: SiGnubash, name: 'Bash' },
+  { icon: SiAmazonaws, name: 'AWS' },
+  { icon: SiMicrosoftazure, name: 'Azure' },
+  { icon: SiGooglecloud, name: 'GCP' },
+  { icon: SiRust, name: 'Rust' }
 ];
 
 const AboutSection: React.FC = () => {
@@ -171,26 +180,26 @@ const AboutSection: React.FC = () => {
               </div>
               <div className="space-y-6">
                 <blockquote className="border-l-4 border-gray-400 pl-4 text-gray-600 dark:text-gray-300 italic">
-                  <p>Didn't get IIT. Reappeared JEE nothing.</p>
+                  <p>Didn't get IIT. Reappeared for JEE nothing.</p>
                   <p>Took diploma. Finished engineering.</p>
                   <p>Didn’t whine. Didn’t settle.</p>
                   <p>I chose ambition over approval.</p>
                 </blockquote>
                 <p className="text-gray-700 dark:text-gray-300">
-                  In 2022, JARVIS stopped being fiction.<br />
-                  AI became real and I knew: that’s <em>my</em> domain.
+                  In 2022, JARVIS no longer a fiction,<br />
+                  AI became real and I knew that’s my <strong>Domain</strong>.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300">
-                  No top-tier degree. No golden resume.<br />
-                  Just obsession and grit.
+                  No top tier degree. No golden resume,<br />
+                  Just obsession and grit with <strong>Builder's mindset</strong>.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300">
-                  You don’t need another safe hire.<br />
-                  You need someone who refuses to be<strong> AVERAGE</strong>.
+                  You don’t need another name on payroll, <br />
+                  You need someone who creates real <strong>Impact</strong>.
                 </p>
-                <p className="text-gray-700 dark:text-gray-300">
-                  Let’s build something worth bleeding for.
-                </p>
+                <blockquote className="border-l-4 border-gray-400 pl-4 text-gray-600 dark:text-gray-300 italic">
+                  <p>Necessity is the mother of Invention and Greatness.</p>
+                </blockquote>
                 <div className="pt-4">
                   <h4 className="text-lg font-semibold text-green-600 dark:text-green-400">
                     <strong>Hobbies & Interest</strong>
@@ -249,8 +258,7 @@ const AboutSection: React.FC = () => {
                   repeatDelay: (techIcons.length - 1) * 1.5,
                   ease: "easeInOut"
                 }}
-                className="w-20 h-20 flex flex-col items-center justify-center rounded-xl bg-gradient-to-tr from-blue-600 to-purple-600 text-white"
-                title={tech.name}
+                className="w-20 h-20 flex flex-col items-center justify-center rounded-xl bg-gradient-to-tr from-gray-900 to-indigo-900 text-indigo-200"
               >
                 <tech.icon className="w-8 h-8 mb-1" />
                 <span className="text-xs text-center mt-1">{tech.name}</span>

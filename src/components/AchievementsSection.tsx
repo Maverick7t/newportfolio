@@ -56,6 +56,7 @@ const AchievementsSection: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {certifications.map((cert, index) => (
               <motion.div
+                key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

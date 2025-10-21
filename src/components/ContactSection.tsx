@@ -130,7 +130,7 @@ const ContactSection: React.FC = () => {
             Let's <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Connect</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Ready to collaborate on your next project? Let's discuss how we can work together to bring your ideas to life.
+            Open to exciting projects and new opportunities let’s collaborate and explore how we can create impact together.
           </p>
         </motion.div>
 
@@ -143,15 +143,7 @@ const ContactSection: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                Get In Touch
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-                I'm always open to discussing new opportunities, innovative projects, and potential collaborations.
-                Whether you have a project in mind or just want to connect, I'd love to hear from you.
-              </p>
-            </div>
+
 
             <div className="space-y-6">
               {contactInfo.map((item, index) => (
@@ -341,23 +333,68 @@ const ContactSection: React.FC = () => {
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
-                  whileHover={{ scale: 1.02, y: -2 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full flex items-center justify-center space-x-2 px-8 py-4 bg-gradient-to-r from-amber-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="relative w-full flex items-center justify-center gap-2 rounded-full px-8 text-white font-semibold cursor-pointer transition-all duration-300 group disabled:opacity-70 disabled:cursor-not-allowed"
+                  style={{
+                    fontSize: '15px',
+                    fontWeight: 600,
+                    lineHeight: 1,
+                    letterSpacing: '-.02em',
+                    height: '48px',
+                    WebkitFontSmoothing: 'antialiased',
+                    background: '#000000',
+                  }}
                 >
+                  {/* Border gradient overlay */}
+                  <span
+                    className="absolute rounded-full transition-opacity duration-300 pointer-events-none"
+                    style={{
+                      inset: '-1px -1px -1.5px -1px',
+                      backgroundImage: 'linear-gradient(180deg, #fcc171, #c17c56 55%, #362821)',
+                    }}
+                  />
+
+                  {/* Main black background */}
+                  <span
+                    className="absolute inset-0 rounded-full pointer-events-none"
+                    style={{
+                      background: '#000000',
+                    }}
+                  />
+
+                  {/* Top radial glow effect - inside the button */}
+                  <span
+                    className="absolute left-1/2 -translate-x-1/2 rounded-full transition-transform duration-300 pointer-events-none"
+                    style={{
+                      top: '-6px',
+                      bottom: '20%',
+                      width: '90%',
+                      backgroundImage: 'radial-gradient(ellipse 40% 40% at 50% 10%, rgba(255, 223, 150, 0.7) 10%, rgba(255, 195, 90, 0.4) 50%, rgba(255, 160, 60, 0.15) 80%, transparent 100%)',
+                      mixBlendMode: 'screen',
+                      filter: 'blur(1px)',
+                    }}
+                  />
+
+                  {/* Content */}
                   {isSubmitting ? (
                     <>
                       <motion.div
                         animate={{ rotate: 360 }}
                         transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                        className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
+                        className="w-5 h-5 border-2 border-white border-t-transparent rounded-full relative z-10"
                       />
-                      <span>Sending...</span>
+                      <span className="relative z-10">Sending...</span>
                     </>
                   ) : (
                     <>
-                      <Send className="w-5 h-5" />
-                      <span>Send Message</span>
+                      <motion.div
+                        whileHover={{ x: 3, y: -3 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <Send className="w-5 h-5 relative z-10" />
+                      </motion.div>
+                      <span className="relative z-10">Send Message</span>
                     </>
                   )}
                 </motion.button>

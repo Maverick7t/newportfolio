@@ -12,7 +12,7 @@ const DevpostSection: React.FC = () => {
             link: "https://devpost.com/aktar?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"
         },
         {
-            title: "Opuna Contribution",
+            title: "Optuna Contribution",
             description: "Actively contributing to Optuna, an open-source framework for automated hyperparameter optimization that accelerates model performance tuning across PyTorch, TensorFlow, and Scikit-Learn.",
             icon: Code2,
             gradient: "from-purple-500 to-pink-600",

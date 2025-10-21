@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import { LucideGithub, ExternalLink } from "lucide-react";
+import { LucideGithub } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
 import TextType from "@/components/ui/TextType";
 
@@ -8,8 +8,7 @@ const HeroSection = () => {
   const controls = useAnimation(); // ← for controlling TextType
 
   const descriptiveText = [
-    "Building resilient, intelligent systems — where code scales, data flows, and reliability rules.",
-    "Actively seeking opportunities where smart systems, automation, and impact meet — let’s build something that scales.",
+    "Actively seeking opportunities In AI, Machine Learning, and Cloud domains.",
   ];
 
   useEffect(() => {
@@ -25,15 +24,9 @@ const HeroSection = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      {/* Removed background image - now applied globally in App.tsx */}
 
       {/* Responsive overlay for better text readability */}
       <div className="absolute inset-0 bg-black/10 sm:bg-black/15 md:bg-black/20 lg:bg-black/20" />
-
-      <div className="absolute inset-0">
-        {/* Floating blobs */}
-        {/* ... your existing animated blobs here ... */}
-      </div>
 
       <div className="relative z-10 text-center px-4 sm:px-8">
         <motion.h1
@@ -87,45 +80,57 @@ const HeroSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 1.5 }}
           >
-            <a
-              href="https://github.com/Maverick7t"
+            <motion.a
+              href="https://www.linkedin.com/in/moinaktar-shaikh-7b3a33207/"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative inline-flex items-center justify-center gap-2 rounded-full px-6 text-white font-semibold text-[15px] leading-none tracking-tight cursor-pointer outline-2 outline-transparent outline-offset-2 transition-all duration-300 hover:outline-none focus:outline-none"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              className="relative inline-flex items-center justify-center gap-2 rounded-full px-8 text-white font-semibold cursor-pointer transition-all duration-300 group"
               style={{
-                fontFamily: 'var(--font-inter), ui-sans-serif, system-ui, sans-serif',
-                WebkitFontSmoothing: 'antialiased',
-                background: 'linear-gradient(to top, #000000 0%, #1a1a1a 50%, #000000 100%)',
+                fontSize: '15px',
+                fontWeight: 600,
+                lineHeight: 1,
+                letterSpacing: '-.02em',
                 height: '36px',
-                boxShadow: '0 2px 4px rgba(0,0,0,0.7), 0 -6px 12px rgba(255,215,0,0.4)',
-                letterSpacing: '-0.02em',
-                boxSizing: 'border-box',
-                border: '1px solid #ffd700'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'linear-gradient(to top, #1a1a1a 0%, #333333 50%, #1a1a1a 100%)';
-                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.6), 0 -8px 16px rgba(255,215,0,0.6)';
-                e.currentTarget.style.border = '1px solid #ffed4a';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'linear-gradient(to top, #000000 0%, #1a1a1a 50%, #000000 100%)';
-                e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.7), 0 -6px 12px rgba(255,215,0,0.4)';
-                e.currentTarget.style.border = '1px solid #ffd700';
-              }}
-              onMouseDown={(e) => {
-                e.currentTarget.style.background = '#000000';
-                e.currentTarget.style.boxShadow = '0 1px 2px rgba(0,0,0,0.7), 0 -4px 10px rgba(255,215,0,0.5)';
-                e.currentTarget.style.border = '1px solid #ffc107';
-              }}
-              onMouseUp={(e) => {
-                e.currentTarget.style.background = 'linear-gradient(to top, #1a1a1a 0%, #333333 50%, #1a1a1a 100%)';
-                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.6), 0 -8px 16px rgba(255,215,0,0.6)';
-                e.currentTarget.style.border = '1px solid #ffed4a';
+                WebkitFontSmoothing: 'antialiased',
+                background: '#000000',
               }}
             >
-              <LucideGithub className="w-4 h-4" />
-              <span>Github account</span>
-            </a>
+              {/* Border gradient overlay */}
+              <span
+                className="absolute rounded-full transition-opacity duration-300 pointer-events-none"
+                style={{
+                  inset: '-1px -1px -1.5px -1px',
+                  backgroundImage: 'linear-gradient(180deg, #fcc171, #c17c56 55%, #362821)',
+                }}
+              />
+
+              {/* Main black background */}
+              <span
+                className="absolute inset-0 rounded-full pointer-events-none"
+                style={{
+                  background: '#000000',
+                }}
+              />
+
+              {/* Top radial glow effect - inside the button */}
+              <span
+                className="absolute left-1/2 -translate-x-1/2 rounded-full transition-transform duration-300 pointer-events-none"
+                style={{
+                  top: '-6px',
+                  bottom: '20%',
+                  width: '90%',
+                  backgroundImage: 'radial-gradient(ellipse 40% 40% at 50% 10%, rgba(255, 223, 150, 0.7) 10%, rgba(255, 195, 90, 0.4) 50%, rgba(255, 160, 60, 0.15) 80%, transparent 100%)',
+                  mixBlendMode: 'screen',
+                  filter: 'blur(1px)',
+                }}
+              />
+
+              {/* Content */}
+              <LucideGithub className="w-4 h-4 relative z-10" />
+              <span className="relative z-10">Github account</span>
+            </motion.a>
           </motion.div>
         </div>
       </div>
