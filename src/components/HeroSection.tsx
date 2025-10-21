@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import { LucideGithub } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
 import TextType from "@/components/ui/TextType";
 
@@ -128,8 +128,8 @@ const HeroSection = () => {
               />
 
               {/* Content */}
-              <LucideGithub className="w-4 h-4 relative z-10" />
-              <span className="relative z-10">Github account</span>
+              <Linkedin className="w-4 h-4 relative z-10" />
+              <span className="relative z-10">LinkedIn account</span>
             </motion.a>
           </motion.div>
         </div>
