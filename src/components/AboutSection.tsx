@@ -238,7 +238,7 @@ const AboutSection: React.FC = () => {
               <p className="text-gray-600 dark:text-gray-400">Tools & Technologies I Use</p>
             </div>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-6 justify-center">
             {techIcons.map((tech, index) => (
               <motion.div
                 key={index}

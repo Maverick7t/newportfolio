@@ -73,7 +73,7 @@ const HeroSection = () => {
           />
         </motion.div>
 
-        <div className="mt-11 flex flex-col items-start gap-y-3.5 sm:flex-row sm:items-center sm:gap-x-6 sm:gap-y-0 justify-center">
+        <div className="mt-11 flex flex-col items-center gap-y-3.5 sm:flex-row sm:items-center sm:gap-x-6 sm:gap-y-0 justify-center w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
