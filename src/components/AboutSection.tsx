@@ -2,7 +2,10 @@
 
 import React from 'react';
 import { motion } from "framer-motion";
-import { GraduationCap, MapPin, Calendar, User, Code2 } from 'lucide-react';
+import { MapPin, Calendar } from 'lucide-react';
+import { GiTrail } from 'react-icons/gi';
+import { PiGraduationCapFill } from 'react-icons/pi';
+import { VscTools } from 'react-icons/vsc';
 
 import {
   SiPython,
@@ -78,8 +81,8 @@ const AboutSection: React.FC = () => {
             {/* Bachelor */}
             <div className="bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40 transform hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                  <GraduationCap className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-red-900 via-pink-900 to-black rounded-xl flex items-center justify-center shadow-inner border border-red-700/50">
+                  <PiGraduationCapFill className="w-6 h-6 text-white" />
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">Education</h3>
@@ -106,8 +109,8 @@ const AboutSection: React.FC = () => {
             {/* Diploma */}
             <div className="bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40 transform hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center">
-                  <GraduationCap className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-red-900 via-pink-900 to-black rounded-xl flex items-center justify-center shadow-inner border border-red-700/50">
+                  <PiGraduationCapFill className="w-6 h-6 text-white" />
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">Education</h3>
@@ -134,8 +137,8 @@ const AboutSection: React.FC = () => {
             {/* PUC */}
             <div className="bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40 transform hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                  <GraduationCap className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-red-900 via-pink-900 to-black rounded-xl flex items-center justify-center shadow-inner border border-red-700/50">
+                  <PiGraduationCapFill className="w-6 h-6 text-white" />
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">Education</h3>
@@ -170,8 +173,8 @@ const AboutSection: React.FC = () => {
           >
             <div className="h-full bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-10 shadow-xl border border-white/30 dark:border-gray-700/40 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(13,148,136,0.4)] transition-all duration-300 flex flex-col justify-start">
               <div className="flex items-center mb-6">
-                <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-teal-600 rounded-xl flex items-center justify-center">
-                  <User className="w-7 h-7 text-white" />
+                <div className="w-14 h-14 bg-gradient-to-br from-purple-900 via-indigo-900 to-black rounded-xl flex items-center justify-center shadow-inner border border-purple-700/50">
+                  <GiTrail className="w-7 h-7 text-white" />
                 </div>
                 <div className="ml-4">
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white">My Journey</h3>
@@ -230,8 +233,8 @@ const AboutSection: React.FC = () => {
           className="mt-16 w-full bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl border border-white/30 dark:border-gray-700/40 rounded-3xl p-10 shadow-xl transform will-change-transform hover:scale-105"
         >
           <div className="flex items-center mb-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-teal-600 rounded-xl flex items-center justify-center">
-              <Code2 className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 bg-gradient-to-br from-cyan-900 via-teal-900 to-black rounded-xl flex items-center justify-center shadow-inner border border-cyan-700/50">
+              <VscTools className="w-6 h-6 text-white" />
             </div>
             <div className="ml-4">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white">Tech Stack</h3>

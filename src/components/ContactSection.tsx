@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin,
   Send,
-  MessageCircle,
   Clock,
   Globe,
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
+import { MdOutlineMarkEmailUnread } from 'react-icons/md';
+import { FiMapPin } from 'react-icons/fi';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { FiMessageCircle } from 'react-icons/fi';
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -25,26 +24,26 @@ const ContactSection: React.FC = () => {
 
   const contactInfo = [
     {
-      icon: Mail,
+      icon: MdOutlineMarkEmailUnread,
       label: 'Email',
       value: 'moinaktarshaikh@gmail.com',
       href: 'mailto:moinaktarshaikh@gmail.com',
-      gradient: 'from-blue-500 to-blue-600',
+      gradient: 'from-gray-300 via-gray-600 to-gray-800',
       description: 'Drop me a line anytime'
     },
     {
-      icon: MapPin,
+      icon: FiMapPin,
       label: 'Location',
       value: 'Bengaluru, karnataka',
-      gradient: 'from-purple-500 to-purple-600',
+      gradient: 'from-gray-300 via-gray-600 to-gray-800',
       description: 'BTM Layout. Madiwala'
     },
     {
-      icon: Linkedin,
+      icon: FaLinkedinIn,
       label: 'LinkedIn',
       value: 'Connect with me',
       href: 'https://www.linkedin.com/in/moinaktar-shaikh-7b3a33207/',
-      gradient: 'from-blue-600 to-blue-700',
+      gradient: 'from-gray-300 via-gray-600 to-gray-800',
       description: 'Professional network'
     }
   ];
@@ -163,7 +162,7 @@ const ContactSection: React.FC = () => {
                       rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                       className="flex items-center space-x-4 p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-2xl border border-white/30 dark:border-gray-700/40 shadow-lg hover:shadow-xl transition-all duration-300"
                     >
-                      <div className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                      <div className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-inner border border-indigo-700/50`}>
                         <item.icon className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
@@ -181,7 +180,7 @@ const ContactSection: React.FC = () => {
                     </a>
                   ) : (
                     <div className="flex items-center space-x-4 p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-2xl border border-white/30 dark:border-gray-700/40 shadow-lg">
-                      <div className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center`}>
+                      <div className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center shadow-inner border border-indigo-700/50`}>
                         <item.icon className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
@@ -234,8 +233,8 @@ const ContactSection: React.FC = () => {
           >
             {/* Header */}
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                <MessageCircle className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-br from-gray-300 via-gray-600 to-gray-800 rounded-xl flex items-center justify-center shadow-inner border border-gray-400/50">
+                <FiMessageCircle className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                 Send Message

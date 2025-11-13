@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Linkedin } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
 import TextType from "@/components/ui/TextType";

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, ExternalLink, Star } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { SiAmazonaws, SiOracle } from 'react-icons/si';
 
 const AchievementsSection: React.FC = () => {
   const certifications = [
@@ -8,16 +9,16 @@ const AchievementsSection: React.FC = () => {
       title: "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional",
       issuer: "Oracle Cloud",
       description: "The Oracle Cloud Infrastructure 2024 Generative AI Professional certification is designed for Software Developers, Machine Learning/AI Engineers, and Gen AI Professionals.",
-      icon: Star,
-      gradient: "from-indigo-500 to-blue-600",
+      icon: SiOracle,
+      gradient: "from-purple-900 to-purple-600",
       link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=1DB266F5ACEB0E174F37E5756C691DD17C8BFA416D085B0379B2C9AE4E5ECBD1"
     },
     {
-      title: "AWS Certified Solutions Architect – Associate",
+      title: "AWS Certified Solutions Architect Associate",
       issuer: "AWS Cloud",
       description: "Professional certification demonstrating proficiency in Cloud infrastructure and services offered by AWS.",
-      icon: Award,
-      gradient: "from-cyan-500 to-blue-600",
+      icon: SiAmazonaws,
+      gradient: "from-blue-900 to-blue-600",
       link: "https://www.credly.com/badges/3fa1dba9-a170-42a2-a7fc-cb2c1639b804/linked_in_profile"
     }
   ];
@@ -38,7 +39,7 @@ const AchievementsSection: React.FC = () => {
             Achievements<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"></span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Highlighting industry-recognized certifications earned in cloud and AI technologies
+            Industry standard certifications in Cloud and AI technologies.
           </p>
         </motion.div>
 
@@ -60,10 +61,9 @@ const AchievementsSection: React.FC = () => {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.1, ease: "easeOut" }} // smoother & snappier
-                whileHover={{ scale: 1.03, rotateX: 1 }} // subtle tilt effect
-                className="relative bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40 transform-gpu"
-                style={{ transformStyle: 'preserve-3d' }}
+                transition={{ duration: 0.1, ease: "easeOut" }}
+                whileHover={{ scale: 1.03 }}
+                className="relative bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40"
               >
                 <div className="flex items-start space-x-4">
                   <div className={`flex-shrink-0 w-12 h-12 bg-gradient-to-br ${cert.gradient} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>

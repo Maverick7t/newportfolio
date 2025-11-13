@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Calendar, MapPin, CheckCircle } from 'lucide-react';
+import { Calendar, MapPin, CheckCircle } from 'lucide-react';
+import { MdOutlineWorkHistory } from 'react-icons/md';
 
 const ExperienceSection: React.FC = () => {
   const experience = {
@@ -32,7 +33,7 @@ const ExperienceSection: React.FC = () => {
             Work <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Experience</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Professional journey and key contributions in AI and machine learning projects
+            Professional Journey and key Contributions
           </p>
         </motion.div>
 
@@ -41,15 +42,14 @@ const ExperienceSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.1, ease: "easeOut" }} // smoother & snappier
-            whileHover={{ scale: 1.03, rotateX: 1 }} // subtle tilt effect
-            className="relative bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40 transform-gpu"
-            style={{ transformStyle: 'preserve-3d' }}
+            transition={{ duration: 0.1, ease: "easeOut" }}
+            whileHover={{ scale: 1.03 }}
+            className="relative bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40"
           >
             {/* Company Logo/Icon */}
             <div className="absolute -top-6 left-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
-                <Briefcase className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-br from-gray-800 to-gray-600 rounded-2xl flex items-center justify-center shadow-lg">
+                <MdOutlineWorkHistory className="w-6 h-6 text-white" />
               </div>
             </div>
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github as LucideGithub, Code2, Bot, Sparkles } from 'lucide-react';
+import { ExternalLink, Github as LucideGithub, Code2 } from 'lucide-react';
+import { FaGoogle } from 'react-icons/fa';
+import { FaAws } from 'react-icons/fa';
 
 const ProjectsSection: React.FC = () => {
   const projects = [
@@ -13,9 +15,9 @@ const ProjectsSection: React.FC = () => {
         "Fully serverless and automated architecture that’s secure, fast, and actually usable for real job alerts.",
       ],
       technologies: [" Python", "React", "Fast API", "Lambda", "DynamoDB", "Bedrock"],
-      icon: Bot,
-      gradient: "from-emerald-500 to-teal-600",
-      bgGradient: "from-emerald-500/10 to-teal-600/10",
+      icon: FaAws,
+      gradient: "from-slate-700 to-slate-300",
+      bgGradient: "from-slate-700/10 to-slate-300/10",
       link: "https://devpost.com/software/raven-ai-sjm47o?ref_content=user-portfolio&ref_feature=in_progress"
     },
     {
@@ -27,9 +29,9 @@ const ProjectsSection: React.FC = () => {
         "Implemented semantic search and AI summarization for real-time Q&A",
       ],
       technologies: ["Python", "LangChain", "Flask", "BigQuery", "Elasticsearch", "React"],
-      icon: Sparkles,
-      gradient: "from-purple-500 to-pink-600",
-      bgGradient: "from-purple-500/10 to-pink-600/10",
+      icon: FaGoogle,
+      gradient: "from-stone-700 to-stone-300",
+      bgGradient: "from-stone-700/10 to-stone-300/10",
       link: "https://devpost.com/software/devinsight-j2qnd9"
     }
   ];
@@ -50,7 +52,7 @@ const ProjectsSection: React.FC = () => {
             Featured <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Innovative solutions built with cutting-edge technologies, showcasing expertise in AI, automation, and full-stack development
+            Where I mix AI, Automation and Full stack engineering into things that actually work. Reflecting how I Think, Build and Solve problems.
           </p>
         </motion.div>
 
@@ -61,10 +63,9 @@ const ProjectsSection: React.FC = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.1, ease: "easeOut" }} // smoother & snappier
-              whileHover={{ scale: 1.03, rotateX: 1 }} // subtle tilt effect
-              className="relative bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40 transform-gpu"
-              style={{ transformStyle: 'preserve-3d' }}
+              transition={{ duration: 0.1, ease: "easeOut" }}
+              whileHover={{ scale: 1.03 }}
+              className="relative bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40"
             >
               {/* Project Icon */}
               <div className="absolute -top-6 left-8">
@@ -129,10 +130,11 @@ const ProjectsSection: React.FC = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.3, delay: idx * 0.05 }}
                         whileHover={{ scale: 1.1, y: -2 }}
-                        className={`px-3 py-1 bg-gradient-to-r ${project.bgGradient} border border-current rounded-full text-sm font-medium cursor-default`}
+                        className="px-3 py-1 bg-transparent border-2 rounded-full text-sm font-medium cursor-default"
                         style={{
-                          background: `linear-gradient(to right, ${project.gradient.includes('emerald') ? 'rgb(16 185 129 / 0.1)' : 'rgb(168 85 247 / 0.1)'}, ${project.gradient.includes('emerald') ? 'rgb(13 148 136 / 0.1)' : 'rgb(236 72 153 / 0.1)'})`,
-                          color: project.gradient.includes('emerald') ? 'rgb(5 150 105)' : 'rgb(147 51 234)'
+                          background: `linear-gradient(to right, ${project.gradient.includes('slate') ? 'rgb(51 65 85 / 0.1)' : 'rgb(68 64 60 / 0.1)'}, ${project.gradient.includes('slate') ? 'rgb(203 213 225 / 0.1)' : 'rgb(214 211 209 / 0.1)'})`,
+                          color: 'white',
+                          borderImage: `linear-gradient(to right, ${project.gradient.includes('slate') ? '#334155' : '#44403c'}, ${project.gradient.includes('slate') ? '#cbd5e1' : '#d6d3d1'}) 1`
                         }}
                       >
                         {tech}

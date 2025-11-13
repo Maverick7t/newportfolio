@@ -5,7 +5,7 @@ import AboutSection from './components/AboutSection';
 import ExperienceSection from './components/ExperienceSection';
 import ProjectsSection from './components/ProjectsSection';
 import AchievementsSection from './components/AchievementsSection';
-import DevpostSection from './components/DevpostSection';
+import DevpostSection from './components/DevArena.tsx';
 import ContactSection from './components/ContactSection';
 // import SplashCursor from "@/components/SplashCursor";
 
