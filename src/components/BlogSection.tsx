@@ -113,17 +113,19 @@ const BlogSection: React.FC = () => {
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: index * 0.1 }}
-                                whileHover={{ scale: 1.05, y: -10 }}
-                                className="group bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40 transform transition-all duration-300 hover:shadow-[0_0_25px_rgba(13,148,136,0.4)] flex flex-col h-full"
+                                transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+                                whileHover={{ scale: 1.05, y: -8, transition: { duration: 0.2 } }}
+                                className="group bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40 flex flex-col h-full hover:shadow-[0_0_25px_rgba(13,148,136,0.4)]"
                             >
                                 {/* Thumbnail */}
                                 {post.thumbnail && (
                                     <div className="mb-4 overflow-hidden rounded-xl h-40 bg-gradient-to-br from-blue-500 to-purple-600">
-                                        <img
+                                        <motion.img
                                             src={post.thumbnail}
                                             alt={post.title}
-                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                            className="w-full h-full object-cover"
+                                            whileHover={{ scale: 1.1 }}
+                                            transition={{ duration: 0.3 }}
                                         />
                                     </div>
                                 )}
@@ -136,7 +138,7 @@ const BlogSection: React.FC = () => {
                                 </div>
 
                                 {/* Content */}
-                                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
+                                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
                                     {post.title}
                                 </h3>
 
