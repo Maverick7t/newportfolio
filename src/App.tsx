@@ -1,4 +1,4 @@
-import { ThemeProvider } from './context/ThemeContext.tsx';
+import { ThemeProvider } from './context/ThemeContext';
 import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -6,6 +6,7 @@ import ExperienceSection from './components/ExperienceSection';
 import ProjectsSection from './components/ProjectsSection';
 import AchievementsSection from './components/AchievementsSection';
 import DevpostSection from './components/DevArena.tsx';
+import BlogSection from './components/BlogSection';
 import ContactSection from './components/ContactSection';
 // import SplashCursor from "@/components/SplashCursor";
 
@@ -33,6 +34,7 @@ function App() {
             <ProjectsSection />
             <AchievementsSection />
             <DevpostSection />
+            <BlogSection />
             <AboutSection />
             <ContactSection />
           </main>

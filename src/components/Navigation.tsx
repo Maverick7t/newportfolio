@@ -12,8 +12,9 @@ import {
   Sun,
   Moon,
   Rocket,
+  BookOpen,
 } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext.tsx';
+import { useTheme } from '../context/ThemeContext';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,17 +37,18 @@ const Navigation = () => {
     { name: 'Projects', href: '#projects', icon: FolderOpen },
     { name: 'Achievements', href: '#achievements', icon: Award },
     { name: 'Dev Arena', href: '#devpost', icon: Rocket },
+    { name: 'Blog', href: '#blog', icon: BookOpen },
     { name: 'About', href: '#about', icon: User },
     { name: 'Contact', href: '#contact', icon: Mail },
   ];
 
-  const scrollToSection = (href: string) => {
+  const handleNavigation = (href: string) => {
     setTimeout(() => {
       const element = document.querySelector(href);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    }, 100); // slight delay ensures DOM is fully rendered
+    }, 100);
     setIsOpen(false);
   };
 
@@ -81,7 +83,7 @@ const Navigation = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center space-x-2 cursor-pointer"
-              onClick={() => scrollToSection('#home')}
+              onClick={() => handleNavigation('#home')}
             >
               <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-white/10 dark:bg-gray-800/20">
                 <img
@@ -103,7 +105,7 @@ const Navigation = () => {
                   key={item.name}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavigation(item.href)}
                   className="px-4 py-2 rounded-lg text-gray-800 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-white/10 dark:hover:bg-gray-800/10 transition-all duration-200 flex items-center space-x-2 group"
                 >
                   <item.icon className="w-4 h-4 group-hover:rotate-12 transition-transform duration-200" />
@@ -164,7 +166,7 @@ const Navigation = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
-                    onClick={() => scrollToSection(item.href)}
+                    onClick={() => handleNavigation(item.href)}
                     className="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-800 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-white/10 dark:hover:bg-gray-800/10 transition-all duration-200 group"
                   >
                     <item.icon className="w-5 h-5 group-hover:rotate-12 transition-transform duration-200" />
