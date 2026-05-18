@@ -3,36 +3,38 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Github as LucideGithub, Code2 } from 'lucide-react';
 import { FaGoogle } from 'react-icons/fa';
 import { FaAws } from 'react-icons/fa';
+import { RiRobot2Line } from "react-icons/ri";
+import { Gauge } from "lucide-react"
 
 const ProjectsSection: React.FC = () => {
   const projects = [
     {
       id: 1,
-      name: "AWS AI Agent Global Hackathon 2025",
-      description: "Raven AI, an agentic AI assistant that helps users make informed career decisions by aligning job insights with their goals.",
+      name: "Race Prediction",
+      description: "Built a machine learning platform that predicts Formula 1 race outcomes using telemetry, qualifying data, driver form, weather, and strategy modeling.",
       highlights: [
-        "Built Using AWS Lambda, DynamoDB, Bedrock, and the Gmail API connected through a serverless pipeline that automates email parsing and AI analysis.",
-        "Fully serverless and automated architecture that’s secure, fast, and actually usable for real job alerts.",
+        "Trained predictive models on multi-year F1 datasets with advanced feature engineering and temporal performance analysis inspired by LSTM-based motorsport research.",
+        "Developed a realtime interactive analytics dashboard featuring live race intelligence, predictive standings, circuit visualization, and matchup simulations.",
       ],
-      technologies: [" Python", "React", "Fast API", "Lambda", "DynamoDB", "Bedrock"],
-      icon: FaAws,
+      technologies: [" Python", "React", "Fast API", "XGBoost", "Pandas", "Scikit-learn"],
+      icon: Gauge,
       gradient: "from-slate-700 to-slate-300",
       bgGradient: "from-slate-700/10 to-slate-300/10",
-      link: "https://devpost.com/software/raven-ai-sjm47o?ref_content=user-portfolio&ref_feature=in_progress"
+      link: "https://github.com/Maverick7t/f1_prediction"
     },
     {
       id: 2,
-      name: "Google AI Accelerate Hackathon 2025",
-      description: "DevInsight, AI powered RAG based system that turn raw data into Insight.",
+      name: "Market Mind: Stock Movement Explanation",
+      description: "Agentic platform for stocks to autonomously explains stocks movement using multi source data pipelines, tool calling agents and semantic retrieval.",
       highlights: [
-        "I used a Retrieval-Augmented Generation (RAG) pipeline powered by LangChain, Elasticsearch, and Vertex AI to analyze GitHub data.",
-        "Implemented semantic search and AI summarization for real-time Q&A",
+        "Built an event driven financial intelligence engine that detects abnormal market movements and links them to high relevance news using vector embeddings and causal ranking algorithms.",
+        "Engineered a tool calling agent that orchestrates tools to delivering structured explanations with 91.4% accuracy against verified ground truth market events",
       ],
-      technologies: ["Python", "LangChain", "Flask", "BigQuery", "Elasticsearch", "React"],
-      icon: FaGoogle,
+      technologies: ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "Strands SDK", "MCP"],
+      icon: RiRobot2Line,
       gradient: "from-stone-700 to-stone-300",
       bgGradient: "from-stone-700/10 to-stone-300/10",
-      link: "https://devpost.com/software/devinsight-j2qnd9"
+      link: "https://github.com/Maverick7t/stock_research"
     }
   ];
 
