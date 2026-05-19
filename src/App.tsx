@@ -14,21 +14,21 @@ import ContactSection from './components/ContactSection';
 function App() {
   return (
     <ThemeProvider>
-      <div
-        className="min-h-screen transition-colors duration-300 relative"
-        style={{
-          backgroundImage: 'url(/background.png)',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundAttachment: 'fixed'
-        }}
-      >
-        {/* <SplashCursor /> */}
-        <div className="min-h-screen relative">
-          <Navigation />
+      <div className="relative">
+        {/* Fixed background layer — fully decoupled from content flow */}
+        <div
+          className="fixed inset-0 -z-10"
+          style={{
+            backgroundImage: 'url(/background.png)',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+          }}
+        />
 
-          <main className="relative z-10">
+        <Navigation />
+
+        <main>
             <HeroSection />
             <ExperienceSection />
             <ProjectsSection />
@@ -37,10 +37,10 @@ function App() {
             <BlogSection />
             <AboutSection />
             <ContactSection />
-          </main>
+        </main>
 
-          {/* Footer */}
-          <footer className="relative z-10 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-t border-white/20 dark:border-gray-700/30 py-8">
+        {/* Footer */}
+        <footer className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-t border-white/20 dark:border-gray-700/30 py-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center">
                 <p className="text-gray-600 dark:text-gray-400">
@@ -48,8 +48,7 @@ function App() {
                 </p>
               </div>
             </div>
-          </footer>
-        </div>
+        </footer>
       </div>
     </ThemeProvider>
   );
