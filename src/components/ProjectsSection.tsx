@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github as LucideGithub, Code2 } from 'lucide-react';
+import { ExternalLink, Github as LucideGithub, Code2, Globe } from 'lucide-react';
 import { FaGoogle } from 'react-icons/fa';
 import { FaAws } from 'react-icons/fa';
 import { RiRobot2Line } from "react-icons/ri";
@@ -20,7 +20,8 @@ const ProjectsSection: React.FC = () => {
       icon: Gauge,
       gradient: "from-slate-700 to-slate-300",
       bgGradient: "from-slate-700/10 to-slate-300/10",
-      link: "https://github.com/Maverick7t/f1_prediction"
+      link: "https://github.com/Maverick7t/f1_prediction",
+      siteLink: "https://raceforecast.vercel.app/"
     },
     {
       id: 2,
@@ -34,7 +35,8 @@ const ProjectsSection: React.FC = () => {
       icon: RiRobot2Line,
       gradient: "from-stone-700 to-stone-300",
       bgGradient: "from-stone-700/10 to-stone-300/10",
-      link: "https://github.com/Maverick7t/stock_research"
+      link: "https://github.com/Maverick7t/stock_research",
+      siteLink: "https://stockmarketmind.vercel.app/"
     }
   ];
 
@@ -157,6 +159,18 @@ const ProjectsSection: React.FC = () => {
                       <span>View Details</span>
                     </motion.button>
                   </a>
+                  {project.siteLink && (
+                    <a href={project.siteLink} target="_blank" rel="noopener noreferrer">
+                      <motion.button
+                        whileHover={{ scale: 1.05, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                        className={`flex items-center space-x-2 px-4 py-2 bg-gradient-to-r ${project.gradient} text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300`}
+                      >
+                        <Globe className="w-4 h-4" />
+                        <span>Site</span>
+                      </motion.button>
+                    </a>
+                  )}
                 </div>
               </div>
 
