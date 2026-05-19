@@ -31,7 +31,7 @@ const AchievementsSection: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -47,7 +47,7 @@ const AchievementsSection: React.FC = () => {
           <motion.h3
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.6 }}
             className="text-2xl font-bold text-gray-900 dark:text-white mb-8"
           >
@@ -60,10 +60,10 @@ const AchievementsSection: React.FC = () => {
                 key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.1, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
                 whileHover={{ scale: 1.03 }}
-                className="relative bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40"
+                className="relative bg-white/20 dark:bg-gray-800/20 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40"
               >
                 <div className="flex items-start space-x-4">
                   <div className={`flex-shrink-0 w-12 h-12 bg-gradient-to-br ${cert.gradient} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
