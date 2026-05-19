@@ -73,7 +73,7 @@ const BlogSection: React.FC = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, amount: 0.15 }}
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
@@ -112,10 +112,10 @@ const BlogSection: React.FC = () => {
                                 rel="noopener noreferrer"
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: true, amount: 0.15 }}
                                 transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
                                 whileHover={{ scale: 1.05, y: -8, transition: { duration: 0.2 } }}
-                                className="group bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40 flex flex-col h-full hover:shadow-[0_0_25px_rgba(13,148,136,0.4)]"
+                                className="group bg-white/20 dark:bg-gray-800/20 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-white/30 dark:border-gray-700/40 flex flex-col h-full hover:shadow-[0_0_25px_rgba(13,148,136,0.4)]"
                             >
                                 {/* Thumbnail */}
                                 {post.thumbnail && (
