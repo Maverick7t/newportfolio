@@ -20,8 +20,8 @@ const ProjectsSection: React.FC = () => {
       icon: Gauge,
       gradient: "from-slate-700 to-slate-300",
       bgGradient: "from-slate-700/10 to-slate-300/10",
-      link: "https://github.com/Maverick7t/f1_prediction",
-      siteLink: "https://raceforecast.vercel.app/"
+      link: "https://github.com/Maverick7t/raceprediction",
+      siteLink: "https://raceprediction.vercel.app/predictions"
     },
     {
       id: 2,
