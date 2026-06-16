@@ -8,7 +8,7 @@ const HeroSection = () => {
   const controls = useAnimation(); // ← for controlling TextType
 
   const descriptiveText = [
-    "Actively seeking opportunities In AI, Machine Learning, and Cloud domains.",
+    "Actively seeking opportunities In Agentic AI, Backend Engineering and Fullstack Development.",
   ];
 
   useEffect(() => {
