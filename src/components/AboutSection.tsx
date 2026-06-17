@@ -70,7 +70,7 @@ const techLayout = [
   { icon: SiGit, name: 'Git', top: 80, left: 1140, rotate: 10 },
 
   // Database
-  { icon: SiPostgresql, name: 'PostgreSQL', top: 150, left: 180, rotate: -7 },
+  { icon: SiPostgresql, name: 'PostgreSQL', top: 180, left: 470, rotate: 3 },
   { icon: SiMysql, name: 'MySQL', top: 170, left: 340, rotate: 5 },
 
   // Systems
@@ -83,7 +83,7 @@ const techLayout = [
 
   // Frontend
   { icon: SiReact, name: 'React', top: 180, left: 60, rotate: -4 },
-  { icon: SiTailwindcss, name: 'Tailwind', top: 180, left: 470, rotate: 3 },
+  { icon: SiTailwindcss, name: 'Tailwind', top: 150, left: 180, rotate: -7 },
 ];
 // ─── Category label helper ────────────────────────────────────────────────────
 interface LabelProps {
