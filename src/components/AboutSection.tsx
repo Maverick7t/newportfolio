@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from "framer-motion";
-import { MapPin, Calendar } from 'lucide-react';
+import { MapPin, Calendar, Download } from 'lucide-react';
 import { GiTrail } from 'react-icons/gi';
 import { PiGraduationCapFill } from 'react-icons/pi';
 import { VscTools } from 'react-icons/vsc';
@@ -367,6 +367,63 @@ const AboutSection: React.FC = () => {
               </motion.div>
             ))}
           </div>
+        </motion.div>
+
+        {/* Resume Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-8 flex justify-center"
+        >
+          <motion.a
+            href="/Moinaktar_Shaikh.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            className="relative inline-flex items-center justify-center gap-2 rounded-full px-8 text-white font-semibold cursor-pointer transition-all duration-300"
+            style={{
+              fontSize: "15px",
+              fontWeight: 600,
+              lineHeight: 1,
+              letterSpacing: "-.02em",
+              height: "36px",
+              WebkitFontSmoothing: "antialiased",
+              background: "#000000",
+            }}
+          >
+            <span
+              className="absolute rounded-full pointer-events-none"
+              style={{
+                inset: "-1px -1px -1.5px -1px",
+                backgroundImage:
+                  "linear-gradient(180deg, #fcc171, #c17c56 55%, #362821)",
+              }}
+            />
+
+            <span
+              className="absolute inset-0 rounded-full pointer-events-none"
+              style={{ background: "#000000" }}
+            />
+
+            <span
+              className="absolute left-1/2 -translate-x-1/2 rounded-full pointer-events-none"
+              style={{
+                top: "-6px",
+                bottom: "20%",
+                width: "90%",
+                backgroundImage:
+                  "radial-gradient(ellipse 40% 40% at 50% 10%, rgba(255,223,150,0.7) 10%, rgba(255,195,90,0.4) 50%, rgba(255,160,60,0.15) 80%, transparent 100%)",
+                mixBlendMode: "screen",
+                filter: "blur(1px)",
+              }}
+            />
+
+            <Download className="w-4 h-4 relative z-10" />
+            <span className="relative z-10">Resume</span>
+          </motion.a>
         </motion.div>
 
       </div>
