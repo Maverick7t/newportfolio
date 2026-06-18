@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { Linkedin } from "lucide-react";
+import { Download } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
 import TextType from "@/components/ui/TextType";
 
@@ -73,7 +74,8 @@ const HeroSection = () => {
           />
         </motion.div>
 
-        <div className="mt-11 flex flex-col items-center gap-y-3.5 sm:flex-row sm:items-center sm:gap-x-6 sm:gap-y-0 justify-center w-full">
+        <div className="mt-11 flex flex-col items-center">
+          {/* LinkedIn Button */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -86,55 +88,108 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="relative inline-flex items-center justify-center gap-2 rounded-full px-8 text-white font-semibold cursor-pointer transition-all duration-300 group"
+              className="relative inline-flex items-center justify-center gap-2 rounded-full px-8 text-white font-semibold cursor-pointer transition-all duration-300"
               style={{
-                fontSize: '15px',
+                fontSize: "15px",
                 fontWeight: 600,
                 lineHeight: 1,
-                letterSpacing: '-.02em',
-                height: '36px',
-                WebkitFontSmoothing: 'antialiased',
-                background: '#000000',
+                letterSpacing: "-.02em",
+                height: "36px",
+                WebkitFontSmoothing: "antialiased",
+                background: "#000000",
               }}
             >
-              {/* Border gradient overlay */}
               <span
-                className="absolute rounded-full transition-opacity duration-300 pointer-events-none"
+                className="absolute rounded-full pointer-events-none"
                 style={{
-                  inset: '-1px -1px -1.5px -1px',
-                  backgroundImage: 'linear-gradient(180deg, #fcc171, #c17c56 55%, #362821)',
+                  inset: "-1px -1px -1.5px -1px",
+                  backgroundImage:
+                    "linear-gradient(180deg, #fcc171, #c17c56 55%, #362821)",
                 }}
               />
 
-              {/* Main black background */}
               <span
                 className="absolute inset-0 rounded-full pointer-events-none"
-                style={{
-                  background: '#000000',
-                }}
+                style={{ background: "#000000" }}
               />
 
-              {/* Top radial glow effect - inside the button */}
               <span
-                className="absolute left-1/2 -translate-x-1/2 rounded-full transition-transform duration-300 pointer-events-none"
+                className="absolute left-1/2 -translate-x-1/2 rounded-full pointer-events-none"
                 style={{
-                  top: '-6px',
-                  bottom: '20%',
-                  width: '90%',
-                  backgroundImage: 'radial-gradient(ellipse 40% 40% at 50% 10%, rgba(255, 223, 150, 0.7) 10%, rgba(255, 195, 90, 0.4) 50%, rgba(255, 160, 60, 0.15) 80%, transparent 100%)',
-                  mixBlendMode: 'screen',
-                  filter: 'blur(1px)',
+                  top: "-6px",
+                  bottom: "20%",
+                  width: "90%",
+                  backgroundImage:
+                    "radial-gradient(ellipse 40% 40% at 50% 10%, rgba(255,223,150,0.7) 10%, rgba(255,195,90,0.4) 50%, rgba(255,160,60,0.15) 80%, transparent 100%)",
+                  mixBlendMode: "screen",
+                  filter: "blur(1px)",
                 }}
               />
 
-              {/* Content */}
               <Linkedin className="w-4 h-4 relative z-10" />
-              <span className="relative z-10">LinkedIn account</span>
+              <span className="relative z-10">LinkedIn Profile</span>
+            </motion.a>
+          </motion.div>
+
+          {/* Resume Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 1.7 }}
+            className="mt-8"
+          >
+            <motion.a
+              href="/Moinaktar_Shaikh.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              className="relative inline-flex items-center justify-center gap-2 rounded-full px-8 text-white font-semibold cursor-pointer transition-all duration-300"
+              style={{
+                fontSize: "15px",
+                fontWeight: 600,
+                lineHeight: 1,
+                letterSpacing: "-.02em",
+                height: "36px",
+                WebkitFontSmoothing: "antialiased",
+                background: "#000000",
+              }}
+            >
+              <span
+                className="absolute rounded-full pointer-events-none"
+                style={{
+                  inset: "-1px -1px -1.5px -1px",
+                  backgroundImage:
+                    "linear-gradient(180deg, #fcc171, #c17c56 55%, #362821)",
+                }}
+              />
+
+              <span
+                className="absolute inset-0 rounded-full pointer-events-none"
+                style={{ background: "#000000" }}
+              />
+
+              <span
+                className="absolute left-1/2 -translate-x-1/2 rounded-full pointer-events-none"
+                style={{
+                  top: "-6px",
+                  bottom: "20%",
+                  width: "90%",
+                  backgroundImage:
+                    "radial-gradient(ellipse 40% 40% at 50% 10%, rgba(255,223,150,0.7) 10%, rgba(255,195,90,0.4) 50%, rgba(255,160,60,0.15) 80%, transparent 100%)",
+                  mixBlendMode: "screen",
+                  filter: "blur(1px)",
+                }}
+              />
+
+              <Download className="w-4 h-4 relative z-10" />
+              <span className="relative z-10">Resume</span>
             </motion.a>
           </motion.div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 
