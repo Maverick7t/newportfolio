@@ -30,48 +30,53 @@ const HeroSection = () => {
 
       <div className="relative z-10 text-center px-4 sm:px-8">
         <motion.h1
-          initial={{ opacity: 0.5, y: 100 }}
+          initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
-          className="mt-16 text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tight font-mono"
+          className="mt-16 text-6xl md:text-8xl lg:text-[9rem] tracking-tight"
           style={{
+            fontFamily: "NexusStroke",
             lineHeight: 1,
-            letterSpacing: '-.04em',
+            letterSpacing: '-.01em',
             backgroundImage: 'radial-gradient(89.47% 51.04% at 44.27% 50%, #e2e3e9 0%, #d4d6de 52.73%, #3d3f4c 100%)',
             backgroundClip: 'text',
             WebkitBackgroundClip: 'text',
             color: 'transparent',
-            fontWeight: 500,
+            fontWeight: 300,
             maxWidth: '100%',
             paddingBottom: '.625rem',
             WebkitFontSmoothing: 'antialiased',
           }}
         >
-          Moinaktar Shaikh
+          <h1
+            className="mt-16 tracking-tight"
+            style={{ fontFamily: "NexusStroke" }}
+          >
+            <span className="text-[11rem]">M</span>
+            <span className="text-[8rem]">OINAKTAR</span>
+            {" "}
+            <span className="text-[11rem]">S</span>
+            <span className="text-[8rem]">HAIKH</span>
+          </h1>
         </motion.h1>
 
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-          className="text-xl md:text-2xl text-gray-700 mt-4"
+          className="text-xl md:text-2xl text-zinc-300 mt-4"
         >
           Data & Cloud Enthusiast
         </motion.h2>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={controls} // ← controlled animation
-          transition={{ duration: 0.6 }}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.0, duration: 0.8 }}
+          className="mt-6 max-w-2xl mx-auto text-zinc-400 text-base md:text-lg leading-relaxed"
         >
-          <TextType
-            text={descriptiveText}
-            initialDelay={1} // ← no delay, it waits for mount
-            typingSpeed={60}
-            pauseDuration={3000}
-            className="mt-4 max-w-xl mx-auto text-gray-600 text-md md:text-lg leading-relaxed"
-          />
-        </motion.div>
+          Actively seeking opportunities in Agentic AI, Backend Engineering and Full Stack Development.
+        </motion.p>
 
         <div className="mt-11 flex flex-col items-center">
           {/* LinkedIn Button */}
