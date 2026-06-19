@@ -244,13 +244,13 @@ const AboutSection: React.FC = () => {
                 </p>
                 <p className="text-gray-700 dark:text-gray-300">
                   My interest started with understanding the layers behind technology <br />
-                  hardware, processors, and how machines execute ideas. That curiosity evolved into building software systems powered by data, cloud infrastructure, and artificial intelligence.
+                  hardware, processors and how machines execute ideas. That curiosity evolved into building software systems powered by data, cloud infrastructure and artificial intelligence.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300">
                   Today, I focus on AI backend engineering and full stack AI development designing scalable APIs, data pipelines and infrastructure to model integration.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300">
-                  I enjoy working at the intersection of software engineering and AI, building systems where algorithms, infrastructure, and product thinking come together.
+                  I enjoy working at the intersection of software engineering and AI, building systems where algorithms, infrastructure and product thinking come together.
                 </p>
                 <blockquote className="border-l-4 border-gray-400 pl-4 text-gray-600 dark:text-gray-300 italic">
                   <p>Necessity is the mother of Invention and Greatness.</p>
