@@ -322,19 +322,19 @@ const AboutSection: React.FC = () => {
               >
                 <div
                   className="
-                    w-28 h-28
-                    rounded-3xl
-                    flex flex-col items-center justify-center
-                    bg-gradient-to-br from-slate-900/90 to-slate-950/90
-                    border border-indigo-500/20
-                    backdrop-blur-xl
-                    shadow-[0_0_25px_rgba(99,102,241,0.15)]
-                    hover:shadow-[0_0_30px_rgba(99,102,241,0.45)]
-                    hover:border-indigo-400/40
-                    transition-shadow transition-[border-color] duration-300
-                  "
+w-28 h-28
+rounded-3xl
+flex flex-col items-center justify-center
+bg-gradient-to-br from-zinc-900/90 to-black/90
+border border-white/10
+backdrop-blur-xl
+shadow-[0_0_20px_rgba(255,255,255,0.04)]
+hover:shadow-[0_0_25px_rgba(255,255,255,0.08)]
+hover:border-white/20
+transition-all duration-300
+"
                 >
-                  <tech.icon className="w-8 h-8 mb-3 text-indigo-300" />
+                  <tech.icon className="w-8 h-8 mb-3 text-zinc-200" />
                   <span className="text-xs font-medium text-gray-200 text-center leading-tight px-1">
                     {tech.name}
                   </span>
