@@ -232,23 +232,25 @@ const AboutSection: React.FC = () => {
                 </div>
               </div>
               <div className="space-y-6">
-                <blockquote className="border-l-4 border-gray-400 pl-4 text-gray-600 dark:text-gray-300 italic">
+                {/* <blockquote className="border-l-4 border-gray-400 pl-4 text-gray-600 dark:text-gray-300 italic">
                   <p>Didn't get IIT. Reappeared for JEE — nothing.</p>
                   <p>Took diploma. Finished engineering.</p>
                   <p>Didn't whine. Didn't settle.</p>
                   <p>I chose ambition over approval.</p>
-                </blockquote>
+                </blockquote> */}
+
                 <p className="text-gray-700 dark:text-gray-300">
-                  In 2022, JARVIS no longer a fiction,<br />
-                  AI became real and I knew that's my <strong>Domain</strong>.
+                  I’m an AI Backend Engineer focused on building scalable systems that bring machine learning models into real world applications.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300">
-                  No top-tier degree. No golden résumé,<br />
-                  Just obsession and grit with a <strong>Builder's mindset</strong>.
+                  My interest started with understanding the layers behind technology <br />
+                  hardware, processors, and how machines execute ideas. That curiosity evolved into building software systems powered by data, cloud infrastructure, and artificial intelligence.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300">
-                  You don't need another name on payroll,<br />
-                  You need someone who creates real <strong>Impact</strong>.
+                  Today, I focus on AI backend engineering and full stack AI development designing scalable APIs, data pipelines and infrastructure to model integration.
+                </p>
+                <p className="text-gray-700 dark:text-gray-300">
+                  I enjoy working at the intersection of software engineering and AI, building systems where algorithms, infrastructure, and product thinking come together.
                 </p>
                 <blockquote className="border-l-4 border-gray-400 pl-4 text-gray-600 dark:text-gray-300 italic">
                   <p>Necessity is the mother of Invention and Greatness.</p>
