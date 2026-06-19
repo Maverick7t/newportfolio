@@ -69,8 +69,18 @@ const Navigation = () => {
 
       {/* Navigation Bar */}
       <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
+        initial={{
+          opacity: 0,
+          y: -40
+        }}
+        animate={{
+          opacity: 1,
+          y: 0
+        }}
+        transition={{
+          duration: 0.9,
+          ease: [0.22, 1, 0.36, 1]
+        }}
         className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${scrolled
           ? 'bg-white/10 dark:bg-gray-900/10 backdrop-blur-xl border-b border-white/20 dark:border-gray-700/30'
           : 'bg-white/5 dark:bg-gray-900/5 backdrop-blur-md'
