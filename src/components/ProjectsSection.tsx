@@ -150,25 +150,57 @@ const ProjectsSection: React.FC = () => {
                 {/* Corrected View Details Button */}
                 <div className="flex space-x-4">
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    <motion.button
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`flex items-center space-x-2 px-4 py-2 bg-gradient-to-r ${project.gradient} text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300`}
+                    <motion.span
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      className="inline-flex items-center gap-2 px-3 py-1 bg-transparent border-2 rounded-full text-sm font-medium"
+                      style={{
+                        background: `linear-gradient(to right, ${project.gradient.includes('slate')
+                          ? 'rgb(51 65 85 / 0.1)'
+                          : 'rgb(68 64 60 / 0.1)'
+                          }, ${project.gradient.includes('slate')
+                            ? 'rgb(203 213 225 / 0.1)'
+                            : 'rgb(214 211 209 / 0.1)'
+                          })`,
+                        color: 'white',
+                        borderImage: `linear-gradient(to right, ${project.gradient.includes('slate')
+                          ? '#334155'
+                          : '#44403c'
+                          }, ${project.gradient.includes('slate')
+                            ? '#cbd5e1'
+                            : '#d6d3d1'
+                          }) 1`
+                      }}
                     >
                       <Code2 className="w-4 h-4" />
-                      <span>View Details</span>
-                    </motion.button>
+                      View Details
+                    </motion.span>
                   </a>
                   {project.siteLink && (
                     <a href={project.siteLink} target="_blank" rel="noopener noreferrer">
-                      <motion.button
-                        whileHover={{ scale: 1.05, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
-                        className={`flex items-center space-x-2 px-4 py-2 bg-gradient-to-r ${project.gradient} text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300`}
+                      <motion.span
+                        whileHover={{ scale: 1.1, y: -2 }}
+                        className="inline-flex items-center gap-2 px-3 py-1 bg-transparent border-2 rounded-full text-sm font-medium"
+                        style={{
+                          background: `linear-gradient(to right, ${project.gradient.includes('slate')
+                            ? 'rgb(51 65 85 / 0.1)'
+                            : 'rgb(68 64 60 / 0.1)'
+                            }, ${project.gradient.includes('slate')
+                              ? 'rgb(203 213 225 / 0.1)'
+                              : 'rgb(214 211 209 / 0.1)'
+                            })`,
+                          color: 'white',
+                          borderImage: `linear-gradient(to right, ${project.gradient.includes('slate')
+                            ? '#334155'
+                            : '#44403c'
+                            }, ${project.gradient.includes('slate')
+                              ? '#cbd5e1'
+                              : '#d6d3d1'
+                            }) 1`
+                        }}
                       >
                         <Globe className="w-4 h-4" />
-                        <span>Site</span>
-                      </motion.button>
+                        Site
+                      </motion.span>
                     </a>
                   )}
                 </div>
