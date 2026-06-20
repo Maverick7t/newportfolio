@@ -49,14 +49,14 @@ const HeroSection = () => {
           }}
         >
           <h1
-            className="mt-16 tracking-tight"
+            className="mt-16 tracking-tight whitespace-nowrap"
             style={{ fontFamily: "NexusStroke" }}
           >
-            <span className="text-[11rem]">M</span>
-            <span className="text-[8rem]">OINAKTAR</span>
+            <span style={{ fontSize: "clamp(4rem, 12vw, 11rem)" }}>M</span>
+            <span style={{ fontSize: "clamp(2.5rem, 8vw, 8rem)" }}>OINAKTAR</span>
             {" "}
-            <span className="text-[11rem]">S</span>
-            <span className="text-[8rem]">HAIKH</span>
+            <span style={{ fontSize: "clamp(4rem, 12vw, 11rem)" }}>S</span>
+            <span style={{ fontSize: "clamp(2.5rem, 8vw, 8rem)" }}>HAIKH</span>
           </h1>
         </motion.h1>
 
