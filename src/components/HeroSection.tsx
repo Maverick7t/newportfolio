@@ -49,11 +49,11 @@ const HeroSection = () => {
           }}
         >
 
-          <span style={{ fontSize: "clamp(4rem, 12vw, 11rem)" }}>M</span>
-          <span style={{ fontSize: "clamp(2.5rem, 8vw, 8rem)" }}>OINAKTAR</span>
+          <span style={{ fontSize: "clamp(3.25rem, 10.5vw, 11rem)" }}>M</span>
+          <span style={{ fontSize: "clamp(2rem, 6.5vw, 8rem)" }}>OINAKTAR</span>
           &nbsp;
-          <span style={{ fontSize: "clamp(4rem, 12vw, 11rem)" }}>S</span>
-          <span style={{ fontSize: "clamp(2.5rem, 8vw, 8rem)" }}>HAIKH</span>
+          <span style={{ fontSize: "clamp(3.25rem, 10.5vw, 11rem)" }}>S</span>
+          <span style={{ fontSize: "clamp(2rem, 6.5vw, 8rem)" }}>HAIKH</span>
 
         </motion.h1>
 
@@ -70,7 +70,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.8 }}
-          className="mt-6 max-w-2xl mx-auto text-zinc-400 text-base md:text-lg leading-relaxed"
+          className="mt-6 max-w-2xl mx-auto px-6 md:px-0 text-zinc-400 text-base md:text-lg leading-relaxed"
         >
           Actively seeking opportunities in Agentic AI, Backend Engineering and Full Stack Development.
           <span className="block md:inline"> Open to Remote work and Relocation.</span>
