@@ -37,7 +37,7 @@ const HeroSection = () => {
           style={{
             fontFamily: "NexusStroke",
             lineHeight: 1,
-            letterSpacing: '0.1em',
+            letterSpacing: '0.01em',
             backgroundImage: 'radial-gradient(89.47% 51.04% at 44.27% 50%, #e2e3e9 0%, #d4d6de 52.73%, #3d3f4c 100%)',
             backgroundClip: 'text',
             WebkitBackgroundClip: 'text',
@@ -48,16 +48,13 @@ const HeroSection = () => {
             WebkitFontSmoothing: 'antialiased',
           }}
         >
-          <h1
-            className="mt-16 tracking-tight whitespace-nowrap"
-            style={{ fontFamily: "NexusStroke" }}
-          >
-            <span style={{ fontSize: "clamp(4rem, 12vw, 11rem)" }}>M</span>
-            <span style={{ fontSize: "clamp(2.5rem, 8vw, 8rem)" }}>OINAKTAR</span>
-            {" "}
-            <span style={{ fontSize: "clamp(4rem, 12vw, 11rem)" }}>S</span>
-            <span style={{ fontSize: "clamp(2.5rem, 8vw, 8rem)" }}>HAIKH</span>
-          </h1>
+
+          <span style={{ fontSize: "clamp(4rem, 12vw, 11rem)" }}>M</span>
+          <span style={{ fontSize: "clamp(2.5rem, 8vw, 8rem)" }}>OINAKTAR</span>
+          &nbsp;
+          <span style={{ fontSize: "clamp(4rem, 12vw, 11rem)" }}>S</span>
+          <span style={{ fontSize: "clamp(2.5rem, 8vw, 8rem)" }}>HAIKH</span>
+
         </motion.h1>
 
         <motion.h2
@@ -76,6 +73,7 @@ const HeroSection = () => {
           className="mt-6 max-w-2xl mx-auto text-zinc-400 text-base md:text-lg leading-relaxed"
         >
           Actively seeking opportunities in Agentic AI, Backend Engineering and Full Stack Development.
+          <span className="block md:inline"> Open to Remote work and Relocation.</span>
         </motion.p>
 
         <div className="mt-11 flex flex-col items-center">
