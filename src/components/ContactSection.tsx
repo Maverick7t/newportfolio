@@ -136,22 +136,22 @@ const ContactSection: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -15 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.25 }}
             className="space-y-8"
           >
 
 
             <div className="space-y-6">
-              {contactInfo.map((item, index) => (
+              {contactInfo.map((item) => (
                 <motion.div
                   key={item.label}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.15 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.2 }}
                   whileHover={{ scale: 1.02, x: 5 }}
                   className="group relative"
                 >
@@ -223,14 +223,14 @@ const ContactSection: React.FC = () => {
 
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.15 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            whileHover={{ scale: 1.04 }}
-            className="relative bg-white/20 dark:bg-gray-800/20 backdrop-blur-2xl rounded-3xl p-8 shadow-xl border border-white/30 dark:border-gray-700/40 transition-transform duration-300 ease-in-out transform-gpu"
-            style={{ transformStyle: 'preserve-3d', willChange: 'transform' }}
+            transition={{ duration: 0.2 }}
+            whileHover={{ scale: 1.02, x: 5 }}
+            className="relative bg-white/20 dark:bg-gray-800/20 backdrop-blur-md rounded-3xl p-8 shadow-xl border border-white/30 dark:border-gray-700/40"
           >
+            {/* style={{ transformStyle: 'preserve-3d', willChange: 'transform' }} */}
+
             {/* Header */}
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-10 h-10 bg-gradient-to-br from-gray-300 via-gray-600 to-gray-800 rounded-xl flex items-center justify-center shadow-inner border border-gray-400/50">
@@ -329,74 +329,72 @@ const ContactSection: React.FC = () => {
                 </div>
 
                 {/* Submit */}
-                <motion.button
-                  type="submit"
-                  disabled={isSubmitting}
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="relative w-full flex items-center justify-center gap-2 rounded-full px-8 text-white font-semibold cursor-pointer transition-all duration-300 group disabled:opacity-70 disabled:cursor-not-allowed"
-                  style={{
-                    fontSize: '15px',
-                    fontWeight: 600,
-                    lineHeight: 1,
-                    letterSpacing: '-.02em',
-                    height: '48px',
-                    WebkitFontSmoothing: 'antialiased',
-                    background: '#000000',
-                  }}
-                >
-                  {/* Border gradient overlay */}
-                  <span
-                    className="absolute rounded-full transition-opacity duration-300 pointer-events-none"
+                <div className="flex justify-center pt-2">
+                  <motion.button
+                    type="submit"
+                    disabled={isSubmitting}
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="relative inline-flex items-center justify-center gap-2 rounded-full px-8 text-white font-semibold cursor-pointer group disabled:opacity-70 disabled:cursor-not-allowed"
                     style={{
-                      inset: '-1px -1px -1.5px -1px',
-                      backgroundImage: 'linear-gradient(180deg, #fcc171, #c17c56 55%, #362821)',
-                    }}
-                  />
-
-                  {/* Main black background */}
-                  <span
-                    className="absolute inset-0 rounded-full pointer-events-none"
-                    style={{
+                      fontSize: '15px',
+                      fontWeight: 600,
+                      lineHeight: 1,
+                      letterSpacing: '-.02em',
+                      height: '48px',
+                      WebkitFontSmoothing: 'antialiased',
                       background: '#000000',
+                      minWidth: '200px',
                     }}
-                  />
+                  >
+                    {/* Border gradient overlay */}
+                    <span
+                      className="absolute rounded-full pointer-events-none"
+                      style={{
+                        inset: '-1px -1px -1.5px -1px',
+                        backgroundImage: 'linear-gradient(180deg, #fcc171, #c17c56 55%, #362821)',
+                      }}
+                    />
 
-                  {/* Top radial glow effect - inside the button */}
-                  <span
-                    className="absolute left-1/2 -translate-x-1/2 rounded-full transition-transform duration-300 pointer-events-none"
-                    style={{
-                      top: '-6px',
-                      bottom: '20%',
-                      width: '90%',
-                      backgroundImage: 'radial-gradient(ellipse 40% 40% at 50% 10%, rgba(255, 223, 150, 0.7) 10%, rgba(255, 195, 90, 0.4) 50%, rgba(255, 160, 60, 0.15) 80%, transparent 100%)',
-                      mixBlendMode: 'screen',
-                      filter: 'blur(1px)',
-                    }}
-                  />
+                    {/* Main black background */}
+                    <span
+                      className="absolute inset-0 rounded-full pointer-events-none"
+                      style={{ background: '#000000' }}
+                    />
 
-                  {/* Content */}
-                  {isSubmitting ? (
-                    <>
-                      <motion.div
-                        animate={{ rotate: 360 }}
-                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                        className="w-5 h-5 border-2 border-white border-t-transparent rounded-full relative z-10"
-                      />
-                      <span className="relative z-10">Sending...</span>
-                    </>
-                  ) : (
-                    <>
-                      <motion.div
-                        whileHover={{ x: 3, y: -3 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <Send className="w-5 h-5 relative z-10" />
-                      </motion.div>
-                      <span className="relative z-10">Send Message</span>
-                    </>
-                  )}
-                </motion.button>
+                    {/* Top radial glow */}
+                    <span
+                      className="absolute left-1/2 -translate-x-1/2 rounded-full pointer-events-none"
+                      style={{
+                        top: '-6px',
+                        bottom: '20%',
+                        width: '90%',
+                        backgroundImage: 'radial-gradient(ellipse 40% 40% at 50% 10%, rgba(255, 223, 150, 0.7) 10%, rgba(255, 195, 90, 0.4) 50%, rgba(255, 160, 60, 0.15) 80%, transparent 100%)',
+                        mixBlendMode: 'screen',
+                        filter: 'blur(1px)',
+                      }}
+                    />
+
+                    {/* Content */}
+                    {isSubmitting ? (
+                      <>
+                        <motion.div
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                          className="w-5 h-5 border-2 border-white border-t-transparent rounded-full relative z-10"
+                        />
+                        <span className="relative z-10">Sending...</span>
+                      </>
+                    ) : (
+                      <>
+                        <motion.div whileHover={{ x: 3, y: -3 }} transition={{ duration: 0.2 }}>
+                          <Send className="w-5 h-5 relative z-10" />
+                        </motion.div>
+                        <span className="relative z-10">Send Message</span>
+                      </>
+                    )}
+                  </motion.button>
+                </div>
               </form>
             )}
           </motion.div>
