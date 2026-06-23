@@ -37,7 +37,7 @@ const HeroSection = () => {
           style={{
             fontFamily: "NexusStroke",
             lineHeight: 1,
-            letterSpacing: '-.01em',
+            letterSpacing: '0.1em',
             backgroundImage: 'radial-gradient(89.47% 51.04% at 44.27% 50%, #e2e3e9 0%, #d4d6de 52.73%, #3d3f4c 100%)',
             backgroundClip: 'text',
             WebkitBackgroundClip: 'text',
