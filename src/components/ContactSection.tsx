@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { MapPin, Plane } from "lucide-react";
 import {
   Send,
   Clock,
@@ -206,7 +207,7 @@ const ContactSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="grid grid-cols-2 gap-4 pt-8"
+              className="grid grid-cols-3 gap-4 pt-8"
             >
               <div className="text-center p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-md rounded-xl border border-white/30 dark:border-gray-700/40">
                 <Clock className="w-8 h-8 text-blue-600 mx-auto mb-2" />
@@ -217,6 +218,11 @@ const ContactSection: React.FC = () => {
                 <Globe className="w-8 h-8 text-green-600 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">Remote</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Work Ready</div>
+              </div>
+              <div className="text-center p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-md rounded-xl border border-white/30 dark:border-gray-700/40">
+                <MapPin className="w-8 h-8 text-purple-600 mx-auto mb-2" />
+                <div className="text-2xl font-bold text-gray-900 dark:text-white">Relocation</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">India & International</div>
               </div>
             </motion.div>
           </motion.div>
