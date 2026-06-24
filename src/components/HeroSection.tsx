@@ -61,9 +61,9 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-          className="text-xl md:text-2xl text-zinc-300 mt-4"
+          className="text-xl md:text-3xl text-zinc-300 mt-4"
         >
-          Data & Cloud Enthusiast
+          Software Engineer
         </motion.h2>
 
         <motion.p
@@ -72,7 +72,7 @@ const HeroSection = () => {
           transition={{ delay: 1.0, duration: 0.8 }}
           className="mt-6 max-w-2xl mx-auto px-6 md:px-0 text-zinc-400 text-base md:text-lg leading-relaxed"
         >
-          Actively seeking opportunities in Agentic AI, Backend Engineering and Full Stack Development.
+          Actively seeking opportunities in Agentic AI, Backend and Full Stack Development.
           <span className="block md:inline"> Open to Remote work and Relocation.</span>
         </motion.p>
 
