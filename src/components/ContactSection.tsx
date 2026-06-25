@@ -209,26 +209,26 @@ const ContactSection: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="grid grid-cols-3 gap-4 pt-8"
             >
-              <div className="text-center p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-md rounded-xl border border-white/30 dark:border-gray-700/40">
+              <div className="text-center p-3 sm:p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-md rounded-xl border border-white/30 dark:border-gray-700/40">
                 <Clock className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">24h</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Response Time</div>
+                <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">24h</div>
+                <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Response Time</div>
               </div>
-              <div className="text-center p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-md rounded-xl border border-white/30 dark:border-gray-700/40">
+              <div className="text-center p-3 sm:p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-md rounded-xl border border-white/30 dark:border-gray-700/40">
                 <Globe className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">Remote</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Work Ready</div>
+                <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Remote</div>
+                <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Work Ready</div>
               </div>
-              <div className="text-center p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-md rounded-xl border border-white/30 dark:border-gray-700/40">
+              <div className="text-center p-3 sm:p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-md rounded-xl border border-white/30 dark:border-gray-700/40">
                 <MapPin className="w-8 h-8 text-purple-600 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">Relocation</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">India & International</div>
+                <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Relocation</div>
+                <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">India & International</div>
               </div>
             </motion.div>
-          </motion.div>
+          </motion.div >
 
           {/* Contact Form */}
-          <motion.div
+          < motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2 }}
@@ -248,165 +248,167 @@ const ContactSection: React.FC = () => {
             </div>
 
             {/* Conditional Message */}
-            {submitted ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="text-center py-12"
-              >
-                <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
-                </div>
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  Message Sent Successfully!
-                </h4>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Thank you for reaching out. I'll get back to you within 24 hours.
-                </p>
-              </motion.div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Name & Email */}
-                <div className="grid sm:grid-cols-2 gap-6">
+            {
+              submitted ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="text-center py-12"
+                >
+                  <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
+                  </div>
+                  <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    Message Sent Successfully!
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Thank you for reaching out. I'll get back to you within 24 hours.
+                  </p>
+                </motion.div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Name & Email */}
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
+                        Full Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                        placeholder="Your Name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                        placeholder="your.email@example.com"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Subject */}
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
-                      Full Name
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
+                      Subject
                     </label>
                     <input
                       type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-                      placeholder="Your Name"
+                      placeholder="What's this about?"
                     />
                   </div>
+
+                  {/* Message */}
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
-                      Email Address
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
+                      Message
                     </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      value={formData.message}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-                      placeholder="your.email@example.com"
+                      className="w-full px-4 py-3 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none"
+                      placeholder="Tell me about your project or just say hello!"
                     />
                   </div>
-                </div>
 
-                {/* Subject */}
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-                    placeholder="What's this about?"
-                  />
-                </div>
-
-                {/* Message */}
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none"
-                    placeholder="Tell me about your project or just say hello!"
-                  />
-                </div>
-
-                {/* Submit */}
-                <div className="flex justify-center pt-2">
-                  <motion.button
-                    type="submit"
-                    disabled={isSubmitting}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="relative inline-flex items-center justify-center gap-2 rounded-full px-8 text-white font-semibold cursor-pointer group disabled:opacity-70 disabled:cursor-not-allowed"
-                    style={{
-                      fontSize: '15px',
-                      fontWeight: 600,
-                      lineHeight: 1,
-                      letterSpacing: '-.02em',
-                      height: '48px',
-                      WebkitFontSmoothing: 'antialiased',
-                      background: '#000000',
-                      minWidth: '200px',
-                    }}
-                  >
-                    {/* Border gradient overlay */}
-                    <span
-                      className="absolute rounded-full pointer-events-none"
+                  {/* Submit */}
+                  <div className="flex justify-center pt-2">
+                    <motion.button
+                      type="submit"
+                      disabled={isSubmitting}
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="relative inline-flex items-center justify-center gap-2 rounded-full px-8 text-white font-semibold cursor-pointer group disabled:opacity-70 disabled:cursor-not-allowed"
                       style={{
-                        inset: '-1px -1px -1.5px -1px',
-                        backgroundImage: 'linear-gradient(180deg, #fcc171, #c17c56 55%, #362821)',
+                        fontSize: '15px',
+                        fontWeight: 600,
+                        lineHeight: 1,
+                        letterSpacing: '-.02em',
+                        height: '48px',
+                        WebkitFontSmoothing: 'antialiased',
+                        background: '#000000',
+                        minWidth: '200px',
                       }}
-                    />
+                    >
+                      {/* Border gradient overlay */}
+                      <span
+                        className="absolute rounded-full pointer-events-none"
+                        style={{
+                          inset: '-1px -1px -1.5px -1px',
+                          backgroundImage: 'linear-gradient(180deg, #fcc171, #c17c56 55%, #362821)',
+                        }}
+                      />
 
-                    {/* Main black background */}
-                    <span
-                      className="absolute inset-0 rounded-full pointer-events-none"
-                      style={{ background: '#000000' }}
-                    />
+                      {/* Main black background */}
+                      <span
+                        className="absolute inset-0 rounded-full pointer-events-none"
+                        style={{ background: '#000000' }}
+                      />
 
-                    {/* Top radial glow */}
-                    <span
-                      className="absolute left-1/2 -translate-x-1/2 rounded-full pointer-events-none"
-                      style={{
-                        top: '-6px',
-                        bottom: '20%',
-                        width: '90%',
-                        backgroundImage: 'radial-gradient(ellipse 40% 40% at 50% 10%, rgba(255, 223, 150, 0.7) 10%, rgba(255, 195, 90, 0.4) 50%, rgba(255, 160, 60, 0.15) 80%, transparent 100%)',
-                        mixBlendMode: 'screen',
-                        filter: 'blur(1px)',
-                      }}
-                    />
+                      {/* Top radial glow */}
+                      <span
+                        className="absolute left-1/2 -translate-x-1/2 rounded-full pointer-events-none"
+                        style={{
+                          top: '-6px',
+                          bottom: '20%',
+                          width: '90%',
+                          backgroundImage: 'radial-gradient(ellipse 40% 40% at 50% 10%, rgba(255, 223, 150, 0.7) 10%, rgba(255, 195, 90, 0.4) 50%, rgba(255, 160, 60, 0.15) 80%, transparent 100%)',
+                          mixBlendMode: 'screen',
+                          filter: 'blur(1px)',
+                        }}
+                      />
 
-                    {/* Content */}
-                    {isSubmitting ? (
-                      <>
-                        <motion.div
-                          animate={{ rotate: 360 }}
-                          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                          className="w-5 h-5 border-2 border-white border-t-transparent rounded-full relative z-10"
-                        />
-                        <span className="relative z-10">Sending...</span>
-                      </>
-                    ) : (
-                      <>
-                        <motion.div whileHover={{ x: 3, y: -3 }} transition={{ duration: 0.2 }}>
-                          <Send className="w-5 h-5 relative z-10" />
-                        </motion.div>
-                        <span className="relative z-10">Send Message</span>
-                      </>
-                    )}
-                  </motion.button>
-                </div>
-              </form>
-            )}
-          </motion.div>
-        </div>
-      </div>
-    </section>
+                      {/* Content */}
+                      {isSubmitting ? (
+                        <>
+                          <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                            className="w-5 h-5 border-2 border-white border-t-transparent rounded-full relative z-10"
+                          />
+                          <span className="relative z-10">Sending...</span>
+                        </>
+                      ) : (
+                        <>
+                          <motion.div whileHover={{ x: 3, y: -3 }} transition={{ duration: 0.2 }}>
+                            <Send className="w-5 h-5 relative z-10" />
+                          </motion.div>
+                          <span className="relative z-10">Send Message</span>
+                        </>
+                      )}
+                    </motion.button>
+                  </div>
+                </form>
+              )
+            }
+          </motion.div >
+        </div >
+      </div >
+    </section >
   );
 };
 export default ContactSection;
