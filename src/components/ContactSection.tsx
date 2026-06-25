@@ -211,18 +211,20 @@ const ContactSection: React.FC = () => {
             >
               <div className="text-center p-3 sm:p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-md rounded-xl border border-white/30 dark:border-gray-700/40">
                 <Clock className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">24h</div>
+                <div className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-white">24h</div>
                 <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Response Time</div>
               </div>
+
               <div className="text-center p-3 sm:p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-md rounded-xl border border-white/30 dark:border-gray-700/40">
                 <Globe className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Remote</div>
+                <div className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-white">Remote</div>
                 <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Work Ready</div>
               </div>
+
               <div className="text-center p-3 sm:p-4 bg-white/20 dark:bg-gray-800/20 backdrop-blur-md rounded-xl border border-white/30 dark:border-gray-700/40">
                 <MapPin className="w-8 h-8 text-purple-600 mx-auto mb-2" />
-                <div className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Relocation</div>
-                <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">India & International</div>
+                <div className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-white">Relocation</div>
+                <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">India & Global</div>
               </div>
             </motion.div>
           </motion.div >
