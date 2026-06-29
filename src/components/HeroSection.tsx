@@ -104,7 +104,7 @@ const HeroSection = () => {
               <span
                 className="absolute rounded-full pointer-events-none"
                 style={{
-                  inset: "-1px -1px -1.5px -1px",
+                  inset: "-1px -1px -1.2px -1px",
                   backgroundImage:
                     "linear-gradient(180deg, #fcc171, #c17c56 55%, #362821)",
                 }}
@@ -132,8 +132,6 @@ const HeroSection = () => {
               <span className="relative z-10">LinkedIn Profile</span>
             </motion.a>
           </motion.div>
-
-
         </div>
       </div>
     </section >
