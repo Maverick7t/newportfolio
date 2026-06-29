@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import { Linkedin } from "lucide-react";
+import { FaLinkedinIn } from "react-icons/fa6";
 import { motion, useAnimation } from "framer-motion";
 import TextType from "@/components/ui/TextType";
 
@@ -128,8 +128,8 @@ const HeroSection = () => {
                 }}
               />
 
-              <Linkedin className="w-4 h-4 relative z-10" />
-              <span className="relative z-10">LinkedIn Profile</span>
+              <FaLinkedinIn className="w-4 h-4 relative z-10" />
+              <span className="relative z-10">Linkedin Profile</span>
             </motion.a>
           </motion.div>
         </div>
