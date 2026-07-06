@@ -1,4 +1,3 @@
-import { ThemeProvider } from './context/ThemeContext';
 import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -13,44 +12,42 @@ import ContactSection from './components/ContactSection';
 
 function App() {
   return (
-    <ThemeProvider>
-      <div className="relative">
-        {/* Fixed background layer — fully decoupled from content flow */}
-        <div
-          className="fixed inset-0 -z-10"
-          style={{
-            backgroundImage: 'url(/background.png)',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-          }}
-        />
+    <div className="relative">
+      {/* Fixed background layer — fully decoupled from content flow */}
+      <div
+        className="fixed inset-0 -z-10"
+        style={{
+          backgroundImage: 'url(/background.png)',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+        }}
+      />
 
-        <Navigation />
+      <Navigation />
 
-        <main>
-          <HeroSection />
-          <ExperienceSection />
-          <ProjectsSection />
-          <AchievementsSection />
-          <DevpostSection />
-          <BlogSection />
-          <AboutSection />
-          <ContactSection />
-        </main>
+      <main>
+        <HeroSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <AchievementsSection />
+        <DevpostSection />
+        <BlogSection />
+        <AboutSection />
+        <ContactSection />
+      </main>
 
-        {/* Footer */}
-        <footer className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-t border-white/20 dark:border-gray-700/30 py-8">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <p className="text-gray-600 dark:text-gray-400">
-                © 2026 Moinaktar Shaikh. Crafted with passion and precision.
-              </p>
-            </div>
+      {/* Footer */}
+      <footer className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-t border-white/20 dark:border-gray-700/30 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-gray-600 dark:text-gray-400">
+              © 2026 Moinaktar Shaikh. Crafted with passion and precision.
+            </p>
           </div>
-        </footer>
-      </div>
-    </ThemeProvider>
+        </div>
+      </footer>
+    </div>
   );
 }
 
