@@ -104,7 +104,7 @@ const HeroSection = () => {
               <span
                 className="absolute rounded-full pointer-events-none"
                 style={{
-                  inset: "-1px -1px -1.2px -1px",
+                  inset: "-1px -1px -1.3px -1px",
                   backgroundImage:
                     "linear-gradient(180deg, #fcc171, #c17c56 55%, #362821)",
                 }}
