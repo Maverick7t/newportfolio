@@ -9,17 +9,13 @@ import {
   FolderOpen,
   Award,
   Mail,
-  Sun,
-  Moon,
   Rocket,
   BookOpen,
 } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -126,22 +122,6 @@ const Navigation = () => {
 
             {/* Right Side Controls */}
             <div className="flex items-center space-x-2">
-              {/* Theme Toggle */}
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={toggleTheme}
-                className="w-10 h-10 rounded-full bg-white/10 dark:bg-gray-800/20 backdrop-blur-sm border border-white/20 dark:border-gray-700/30 flex items-center justify-center text-gray-800 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200"
-              >
-                <motion.div
-                  initial={false}
-                  animate={{ rotate: theme === 'dark' ? 180 : 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-                </motion.div>
-              </motion.button>
-
               {/* Mobile Hamburger Button */}
               <motion.button
                 whileHover={{ scale: 1.1 }}
