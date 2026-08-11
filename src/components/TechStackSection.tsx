@@ -115,7 +115,7 @@ const ToolCard: React.FC<{
     <motion.div
       initial={{
         opacity: 0,
-        scale: 0.9,
+        scale: 0.95,
       }}
       whileInView={{
         opacity: 1,
@@ -123,9 +123,10 @@ const ToolCard: React.FC<{
       }}
       viewport={{
         once: true,
+        amount: 0.1,
       }}
       transition={{
-        duration: 0.45,
+        duration: 0.3,
         delay: index * 0.05,
         ease: "easeOut",
       }}
@@ -147,7 +148,8 @@ const ToolCard: React.FC<{
         shadow-[0_0_20px_rgba(255,255,255,0.04)]
         hover:shadow-[0_0_25px_rgba(255,255,255,0.08)]
         hover:border-white/20
-        transition-all duration-300
+        transition-[box-shadow,border-color]
+        duration-300
         cursor-default
       "
     >
