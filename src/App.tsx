@@ -1,5 +1,6 @@
 import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
+import TechStackSection from './components/TechStackSection';
 import AboutSection from './components/AboutSection';
 import ExperienceSection from './components/ExperienceSection';
 import ProjectsSection from './components/ProjectsSection';
@@ -29,6 +30,7 @@ function App() {
       <main>
         <HeroSection />
         <ExperienceSection />
+        <TechStackSection />
         <ProjectsSection />
         <AchievementsSection />
         <DevpostSection />
