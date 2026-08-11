@@ -12,6 +12,7 @@ const ProjectsSection: React.FC = () => {
       id: 1,
       name: "Race Prediction",
       description: "Built a machine learning platform that predicts Formula 1 race outcomes using telemetry, qualifying data, driver form, weather, and strategy modeling.",
+      mobileDescription: "ML platform predicting Formula 1 race outcomes using telemetry, driver form, weather, and strategy data.",
       highlights: [
         "Trained predictive models on multi-year F1 datasets with advanced feature engineering and temporal performance analysis inspired by LSTM-based motorsport research.",
         "Developed a realtime interactive analytics dashboard featuring live race intelligence, predictive standings, circuit visualization, and matchup simulations.",
@@ -27,6 +28,7 @@ const ProjectsSection: React.FC = () => {
       id: 2,
       name: "Market Mind: Stock Movement Explanation",
       description: "Agentic platform for stocks to autonomously explains stocks movement using multi source data pipelines, tool calling agents and semantic retrieval.",
+      mobileDescription: "Agentic stock intelligence platform that explains market movements using data pipelines, tool calling, and semantic retrieval.",
       highlights: [
         "Built an event driven financial intelligence engine that detects abnormal market movements and links them to high relevance news using vector embeddings and causal ranking algorithms.",
         "Engineered a tool calling agent that orchestrates tools to delivering structured explanations with 91.4% accuracy against verified ground truth market events",
@@ -55,9 +57,9 @@ const ProjectsSection: React.FC = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Featured <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Projects</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          {/* <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             Where I mix AI, Automation and Full stack engineering into things that actually work. Reflecting how I Think, Build and Solve problems.
-          </p>
+          </p> */}
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8">
@@ -88,14 +90,20 @@ const ProjectsSection: React.FC = () => {
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                       {project.name}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-                      {project.description}
-                    </p>
+                    {/* Desktop description */}
+                <p className="hidden sm:block text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                  {project.description}
+                </p>
+
+                {/* Mobile description */}
+                <p className="sm:hidden text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                  {project.mobileDescription}
+                </p>
                   </div>
                 </div>
 
-                {/* Highlights */}
-                <div className="mb-6">
+                {/* Highlights - hidden on mobile */}
+                <div className="hidden sm:block mb-6">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                     Key Achievements
                   </h4>
