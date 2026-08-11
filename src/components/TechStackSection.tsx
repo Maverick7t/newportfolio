@@ -4,7 +4,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaTools } from "react-icons/fa";
 
-
 import {
   SiPython,
   SiFlask,
@@ -25,8 +24,8 @@ import {
 } from "react-icons/si";
 
 import { VscMcp, VscAzure } from "react-icons/vsc";
-import { FaAws } from "react-icons/fa6";
-import { FaDownload } from "react-icons/fa6";
+import { FaAws, FaDownload } from "react-icons/fa6";
+
 import {
   SiLangchaincorporate,
   SiMlflow,
@@ -48,10 +47,8 @@ const skillGroups = [
       { icon: SiDjango, name: "Django" },
       { icon: SiMysql, name: "MySQL" },
     ],
-
     capability:
       "Backend services and API driven applications with structured application logic, database design, authentication, asynchronous processing & secure data access.",
-
     reverse: false,
   },
 
@@ -64,10 +61,8 @@ const skillGroups = [
       { icon: SiCplusplus, name: "C++" },
       { icon: SiGnubash, name: "Bash" },
     ],
-
     capability:
       "Complete application interfaces and supporting services, integrate frontend applications with APIs & work across application & system level code using TypeScript, Node.js, C++ & Bash.",
-
     reverse: true,
   },
 
@@ -80,10 +75,8 @@ const skillGroups = [
       { icon: TbBrandElastic, name: "Elasticsearch" },
       { icon: SiHelix, name: "Strands SDK" },
     ],
-
     capability:
       "AI and agentic applications with model inference, agent orchestration, tool integration, retrieval workflows, model tracking & ML prediction pipelines.",
-
     reverse: false,
   },
 
@@ -96,10 +89,8 @@ const skillGroups = [
       { icon: VscAzure, name: "Azure" },
       { icon: SiGooglecloud, name: "GCP" },
     ],
-
     capability:
       "Deploy cloud based applications using containerized services, cloud infrastructure, orchestration, version controlled workflows & scalable deployment environments.",
-
     reverse: true,
   },
 ];
@@ -109,14 +100,9 @@ const skillGroups = [
 const ToolCard: React.FC<{
   icon: React.ElementType;
   name: string;
-  index: number;
-}> = ({ icon: Icon }) => {
+}> = ({ icon: Icon, name }) => {
   return (
-    <motion.div
-      whileHover={{
-        scale: 1.06,
-        y: -4,
-      }}
+    <div
       className="
         w-24 h-24
         rounded-2xl
@@ -127,13 +113,14 @@ const ToolCard: React.FC<{
         from-zinc-900/90
         to-black/90
         border border-white/10
-        backdrop-blur-xl
         shadow-[0_0_20px_rgba(255,255,255,0.04)]
         hover:shadow-[0_0_25px_rgba(255,255,255,0.08)]
         hover:border-white/20
-        transition-[box-shadow,border-color]
+        transition-all
         duration-300
         cursor-default
+        transform-gpu
+        hover:scale-105
       "
     >
       <Icon className="w-8 h-8 mb-2 text-zinc-200" />
@@ -141,7 +128,7 @@ const ToolCard: React.FC<{
       <span className="text-xs font-medium text-gray-200 text-center leading-tight px-1">
         {name}
       </span>
-    </motion.div>
+    </div>
   );
 };
 
@@ -158,21 +145,10 @@ const TechStackSection: React.FC = () => {
         {/* ── Section Header ── */}
 
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-            amount: 0.15,
-          }}
-          transition={{
-            duration: 0.8,
-          }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -185,22 +161,7 @@ const TechStackSection: React.FC = () => {
 
         {/* ── Main Tech Stack Card ── */}
 
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 40,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-            amount: 0.15,
-          }}
-          transition={{
-            duration: 0.8,
-          }}
+        <div
           className="
             w-full
             bg-white/20
@@ -213,7 +174,6 @@ const TechStackSection: React.FC = () => {
             shadow-xl
           "
         >
-
           {/* ── Card Header ── */}
 
           <div className="flex items-center mb-10">
@@ -232,41 +192,37 @@ const TechStackSection: React.FC = () => {
             </div>
           </div>
 
-          {/* ── Four Zig-Zag Skill Cards ── */}
+          {/* ── Skill Groups ── */}
 
           <div className="space-y-6">
-
-            {skillGroups.map((group, groupIndex) => (
+            {skillGroups.map((group) => (
               <motion.div
-                key={groupIndex}
-                initial={{
-                  opacity: 0,
-                  y: 30,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
+                key={group.tools.map((tool) => tool.name).join("-")}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{
                   once: true,
                   amount: 0.15,
                 }}
                 transition={{
-                  duration: 0.6,
-                  delay: groupIndex * 0.1,
+                  duration: 0.4,
+                  ease: "easeOut",
                 }}
+                whileHover={{ scale: 1.01 }}
                 className="
-                  rounded-3xl
+                  relative
                   bg-black/20
                   dark:bg-black/20
-                  border border-white/10
                   backdrop-blur-md
+                  rounded-3xl
                   p-5 sm:p-6
+                  shadow-lg
+                  border border-white/10
                   hover:border-white/20
-                  transition-all duration-300
+                  transition-colors
+                  duration-300
                 "
               >
-
                 <div
                   className={`
                     flex
@@ -277,21 +233,17 @@ const TechStackSection: React.FC = () => {
                     ${group.reverse ? "lg:flex-row-reverse" : ""}
                   `}
                 >
-
                   {/* ── Tools ── */}
 
                   <div className="w-full lg:w-1/2">
                     <div className="grid grid-cols-3 gap-3 justify-items-center">
-
-                      {group.tools.map((tool, toolIndex) => (
+                      {group.tools.map((tool) => (
                         <ToolCard
                           key={tool.name}
                           icon={tool.icon}
                           name={tool.name}
-                          index={toolIndex}
                         />
                       ))}
-
                     </div>
                   </div>
 
@@ -302,37 +254,26 @@ const TechStackSection: React.FC = () => {
                   {/* ── Capability ── */}
 
                   <div className="w-full lg:w-1/2 flex items-center">
-
                     <div className="px-2 sm:px-4 lg:px-6">
-
                       <div className="flex items-start gap-3 mb-4">
-
-                        {/* <div className="flex-shrink-0 mt-2 w-2 h-2 rounded-full bg-gradient-to-r from-cyan-400 to-teal-400" /> */}
-
                         <h4 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">
                           What I Can Build
                         </h4>
-
                       </div>
 
                       <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
                         {group.capability}
                       </p>
-
                     </div>
-
                   </div>
-
                 </div>
-
               </motion.div>
             ))}
-
           </div>
+        </div>
 
-        </motion.div>
+        {/* ── Resume Button ── */}
 
-        {/* Resume Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -345,7 +286,20 @@ const TechStackSection: React.FC = () => {
             download="Moinaktar_Shaikh.pdf"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.98 }}
-            className="relative inline-flex items-center justify-center gap-2 rounded-full px-8 text-white font-semibold cursor-pointer transition-all duration-300"
+            className="
+              relative
+              inline-flex
+              items-center
+              justify-center
+              gap-2
+              rounded-full
+              px-8
+              text-white
+              font-semibold
+              cursor-pointer
+              transition-all
+              duration-300
+            "
             style={{
               fontSize: "15px",
               fontWeight: 600,
@@ -367,7 +321,9 @@ const TechStackSection: React.FC = () => {
 
             <span
               className="absolute inset-0 rounded-full pointer-events-none"
-              style={{ background: "#000000" }}
+              style={{
+                background: "#000000",
+              }}
             />
 
             <span
@@ -384,10 +340,12 @@ const TechStackSection: React.FC = () => {
             />
 
             <FaDownload className="w-4 h-4 relative z-10" />
-            <span className="relative z-10">Resume</span>
+
+            <span className="relative z-10">
+              Resume
+            </span>
           </motion.a>
         </motion.div>
-
       </div>
     </section>
   );
