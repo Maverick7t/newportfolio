@@ -72,8 +72,8 @@ const HeroSection = () => {
           transition={{ delay: 1.0, duration: 0.8 }}
           className="mt-6 max-w-2xl mx-auto px-6 md:px-0 text-zinc-400 text-base md:text-lg leading-relaxed"
         >
-          Actively seeking opportunities in Agentic AI, Backend and Full Stack Development.
-          <span className="block md:inline"> Open to Remote work and Relocation.</span>
+          AWS Certified Solutions Architect Associate.
+          <span className="block md:inline"> Building AI backend systems, agentic applications, ML prediction systems & full stack products.</span>
         </motion.p>
 
         <div className="mt-11 flex flex-col items-center">
