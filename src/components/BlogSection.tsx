@@ -80,9 +80,9 @@ const BlogSection: React.FC = () => {
                     <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
                         Latest <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Blog Posts</span>
                     </h2>
-                    <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    {/* <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
                         Insights on AI, engineering, and building impactful projects
-                    </p>
+                    </p> */}
                 </motion.div>
 
                 {/* Blog Cards Grid */}
