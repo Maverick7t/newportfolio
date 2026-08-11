@@ -12,6 +12,7 @@ import {
   Rocket,
   BookOpen,
 } from 'lucide-react';
+import { LiaToolsSolid } from "react-icons/lia";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,9 +31,10 @@ const Navigation = () => {
     { name: 'Home', href: '#home', icon: Home },
 
     { name: 'Experience', href: '#experience', icon: Briefcase },
+    { name: 'Skills', href: '#tech-stack', icon: LiaToolsSolid },
     { name: 'Projects', href: '#projects', icon: FolderOpen },
     { name: 'Achievements', href: '#achievements', icon: Award },
-    { name: 'Dev Arena', href: '#devpost', icon: Rocket },
+    { name: 'Dev ', href: '#devpost', icon: Rocket },
     { name: 'Blog', href: '#blog', icon: BookOpen },
     { name: 'About', href: '#about', icon: User },
     { name: 'Contact', href: '#contact', icon: Mail },
