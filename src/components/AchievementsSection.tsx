@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
-import { SiAmazonaws, SiOracle } from 'react-icons/si';
+import { GrOracle } from "react-icons/gr";
+import { FaAws } from "react-icons/fa6";
+
 
 const AchievementsSection: React.FC = () => {
   const certifications = [
@@ -9,7 +11,7 @@ const AchievementsSection: React.FC = () => {
       title: "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional",
       issuer: "Oracle Cloud",
       description: "The Oracle Cloud Infrastructure 2024 Generative AI Professional certification is designed for Software Developers, Machine Learning/AI Engineers, and Gen AI Professionals.",
-      icon: SiOracle,
+      icon: GrOracle,
       gradient: "from-purple-900 to-purple-600",
       link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=1DB266F5ACEB0E174F37E5756C691DD17C8BFA416D085B0379B2C9AE4E5ECBD1"
     },
@@ -17,7 +19,7 @@ const AchievementsSection: React.FC = () => {
       title: "AWS Certified Solutions Architect Associate",
       issuer: "AWS Cloud",
       description: "Professional certification demonstrating proficiency in Cloud infrastructure and services offered by AWS.",
-      icon: SiAmazonaws,
+      icon: FaAws,
       gradient: "from-blue-900 to-blue-600",
       link: "https://www.credly.com/badges/3fa1dba9-a170-42a2-a7fc-cb2c1639b804/linked_in_profile"
     }
@@ -38,9 +40,9 @@ const AchievementsSection: React.FC = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Achievements<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"></span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          {/* <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             Industry standard certifications in Cloud and AI technologies.
-          </p>
+          </p> */}
         </motion.div>
 
         <div>
