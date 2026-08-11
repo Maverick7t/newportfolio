@@ -32,9 +32,9 @@ const ExperienceSection: React.FC = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Work <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Experience</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          {/* <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
             Professional Journey and key Contributions
-          </p>
+          </p> */}
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
@@ -121,7 +121,7 @@ const ExperienceSection: React.FC = () => {
                 Technologies & Tools
               </h4>
               <div className="flex flex-wrap gap-2">
-                {['Python', 'Pytorch', 'TensorFlow', 'Jupyter', 'Google Colab'].map((tech, index) => (
+                {['Python', 'Pytorch', 'TensorFlow', 'Jupyter', 'Linux', 'NVIDIA A100 GPU'].map((tech, index) => (
                   <motion.span
                     key={tech}
                     initial={{ opacity: 0, scale: 0 }}
