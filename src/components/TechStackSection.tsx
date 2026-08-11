@@ -110,26 +110,9 @@ const ToolCard: React.FC<{
   icon: React.ElementType;
   name: string;
   index: number;
-}> = ({ icon: Icon, name, index }) => {
+}> = ({ icon: Icon }) => {
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-        scale: 0.95,
-      }}
-      whileInView={{
-        opacity: 1,
-        scale: 1,
-      }}
-      viewport={{
-        once: true,
-        amount: 0.1,
-      }}
-      transition={{
-        duration: 0.3,
-        delay: index * 0.05,
-        ease: "easeOut",
-      }}
       whileHover={{
         scale: 1.06,
         y: -4,
