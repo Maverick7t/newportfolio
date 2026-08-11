@@ -114,19 +114,17 @@ const ToolCard: React.FC<{
   return (
     <motion.div
       initial={{
-        opacity: 0,
-        scale: 0.8,
+        opacity: 1,
+        scale: 0.92,
       }}
-      whileInView={{
+      animate={{
         opacity: 1,
         scale: 1,
       }}
-      viewport={{
-        once: true,
-      }}
       transition={{
-        duration: 0.3,
+        duration: 0.45,
         delay: index * 0.05,
+        ease: "easeOut",
       }}
       whileHover={{
         scale: 1.06,
